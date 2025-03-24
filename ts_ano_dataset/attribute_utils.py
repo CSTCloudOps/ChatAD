@@ -1,0 +1,30 @@
+# Copyright 2024 Tsinghua University and ByteDance.
+#
+# Licensed under the MIT License (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     https://opensource.org/license/mit
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import json
+
+
+# Config
+CONFIG_PATH = '/home/wzx/ChatAD/ts_ano_dataset/config/metric_set.json'
+
+# Load json
+control_attribute_data = json.load(open(CONFIG_PATH))
+metric_to_attributes = {}
+
+for category in control_attribute_data:
+    for k, v in category['attributes'].items():
+        metric_to_attributes[k] = v
+
+def metric_to_controlled_attributes(metric: str):
+    return metric_to_attributes.get(metric, None)
