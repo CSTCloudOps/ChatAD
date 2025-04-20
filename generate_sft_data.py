@@ -11,7 +11,7 @@ import base64
 import os
 import json
 random.seed(42)
-
+np.random.seed(42)
 ONE_SHOT = False
 FEW_SHOT = False
 TYPE = 'image' # image or text or text_and_image
@@ -88,22 +88,37 @@ def plot_time_series(ts: np.ndarray, features: TimeSeriesFeatures) -> List[Dict[
     # 生成唯一的文件名
     img_filename = f"ts_{uuid.uuid4().hex[:8]}.png"
     img_path = f"./SFT_IMAGE/{img_filename}"
-    
-    # 将图像保存为字节
-    buf = io.BytesIO()
-    plt.savefig(buf, format='png', dpi=100, bbox_inches='tight')
     # 保存到本地文件系统
     plt.savefig(img_path, dpi=100, bbox_inches='tight')
     plt.close()
-    buf.seek(0)
     
-    # 直接保存字节对象而不是转换为字典
-    img_bytes = buf.getvalue()
-    img_dict = {
-        "bytes": img_bytes,  # 直接保存字节对象
-        "path": img_path
-    }
-    # 返回包含一个字典的列表
+    return [img_path]
+
+
+def plot_time_series2(ts: np.ndarray, features: TimeSeriesFeatures) -> List[Dict[str, Any]]:
+    """将时间序列绘制成图像并返回字节字典格式列表"""
+    plt.figure(figsize=(12, 6))
+    plt.bar([i for i in range(len(ts))], ts, label='Time Series', color='blue')
+    
+    # 如果有异常，用红色标记
+    # if features.has_anomalies:
+    #     for anomaly in features.anomalies:
+    #         start = anomaly['position']
+    #         end = start + anomaly['length']
+    #         plt.axvspan(start, end, color='red', alpha=0.3)
+    
+    # plt.grid(True)
+    plt.title('Time Series')
+    plt.xlabel('Index')
+    plt.ylabel('Value')
+    
+    # 生成唯一的文件名
+    img_filename = f"ts_{uuid.uuid4().hex[:8]}.png"
+    img_path = f"./SFT_IMAGE/{img_filename}"
+    # 保存到本地文件系统
+    plt.savefig(img_path, dpi=100, bbox_inches='tight')
+    plt.close()
+    
     return [img_path]
 
 
@@ -416,7 +431,6 @@ def generate_time_series(length: int = 100) -> Tuple[np.ndarray, TimeSeriesFeatu
 def generate_question(ts: np.ndarray, features: TimeSeriesFeatures) -> Dict[str, Any]:
     """Generate a question based on time series features"""
     # 生成图像列表
-    img_path = plot_time_series(ts, features)
     if not ONE_SHOT and not FEW_SHOT:
         background_info = (
             "Background Information:\n"
@@ -445,11 +459,13 @@ def generate_question(ts: np.ndarray, features: TimeSeriesFeatures) -> Dict[str,
             "4. Level Shift: Sudden overall increase or decrease in baseline level\n\n"
         )
     if TYPE == 'image':
+        img_path = plot_time_series(ts, features)
         question = f"<image>Given time series visualization, analyze the time series and detect anomalies.\n\n"
     elif TYPE == 'text':
-        img_list = []
+        img_path = []
         question = f"Input Data:\nTime Series = {ts.tolist()}\n\n" + f"Given the time series, analyze the time series and detect anomalies.\n\n"
     elif TYPE == 'text_and_image':
+        img_path = plot_time_series(ts, features)
         question = f"<image>Given time series visualization, analyze the time series and detect anomalies.\n\n" + f"Input Data:\nTime Series = {ts.tolist()}\n\n"
     
     if COT:
@@ -621,7 +637,6 @@ def get_anomaly_description(features: TimeSeriesFeatures) -> str:
 def generate_shaplet_question(ts: np.ndarray, features: TimeSeriesFeatures) -> Dict[str, Any]:
     """Generate multiple choice questions for time series anomaly detection"""
     # Generate image list
-    img_path = plot_time_series(ts, features)
     
     # Basic background information
     background_info = (
@@ -635,11 +650,13 @@ def generate_shaplet_question(ts: np.ndarray, features: TimeSeriesFeatures) -> D
     
     # Set question description based on image type
     if TYPE == 'image':
+        img_path = plot_time_series(ts, features)
         question_intro = f"<image>Given the time series visualization, analyze the time series and detect anomalies.\n\n"
     elif TYPE == 'text':
-        img_list = []
+        img_path = []
         question_intro = f"Input Data:\nTime Series = {ts.tolist()}\n\nGiven the time series, analyze and detect anomalies.\n\n"
     elif TYPE == 'text_and_image':
+        img_path = plot_time_series(ts, features)
         question_intro = f"<image>Given the time series visualization, analyze the time series and detect anomalies.\n\nInput Data:\nTime Series = {ts.tolist()}\n\n"
     
     # Build problem description
@@ -771,7 +788,6 @@ def generate_basic_question(ts: np.ndarray, features: TimeSeriesFeatures) -> Dic
     else:
         ts_zscore = ts.copy()
     ts_zscore = round_ts(ts_zscore)  # 四舍五入保留3位小数
-    img_path = plot_time_series(ts_zscore, features)
     
     # 设置问题类型
     question_types = [
@@ -784,11 +800,13 @@ def generate_basic_question(ts: np.ndarray, features: TimeSeriesFeatures) -> Dic
     
     # 根据问题类型设置问题描述
     if TYPE == 'image':
+        img_path = plot_time_series(ts_zscore, features)
         question_intro = f"<image>Given the time series visualization, "
     elif TYPE == 'text':
-        img_list = []
+        img_path = []
         question_intro = f"Input Data:\nTime Series = {ts_zscore.tolist()}\n\nGiven the time series, "
     elif TYPE == 'text_and_image':
+        img_path = plot_time_series(ts_zscore, features)
         question_intro = f"<image>Given the time series visualization, \n\nInput Data:\nTime Series = {ts_zscore.tolist()}\n\n"
     
     # 根据问题类型构建具体问题
@@ -1005,12 +1023,12 @@ def main():
     # Ensure figures directory exists
     os.makedirs("./SFT_IMAGE", exist_ok=True)
     os.makedirs("./SFT_DATA", exist_ok=True)
-    # train_num = 5000
-    # test_num = 400
-    # eval_num = 2000
-    train_num = 1000
-    test_num = 5
-    eval_num = 1000
+    train_num = 5000
+    test_num = 400
+    eval_num = 2000
+    # train_num = 1000
+    # test_num = 5
+    # eval_num = 1000
 
 
 
@@ -1022,8 +1040,8 @@ def main():
         
         print("生成训练数据...")
         train_data = generate_mixed_data(train_num)
-        # print("生成测试数据...")
-        # test_data = generate_mixed_data(test_num)
+        print("生成测试数据...")
+        test_data = generate_mixed_data(test_num)
         print("生成评估数据...")
         eval_data = generate_mixed_data(eval_num)
 
@@ -1033,6 +1051,9 @@ def main():
         #     json.dump(test_data, f)
         with open(f'./data/ts_eval_{TYPE}_{data_type}.json', 'w') as f:
             json.dump(eval_data, f)
+
+        eval_df = pd.DataFrame(eval_data)
+        eval_df.to_parquet(f'./data/ts_eval_{TYPE}_{data_type}.parquet')
         
     elif data_type == "shaplet":
         print("生成shaplet格式的时间序列异常检测数据...")
