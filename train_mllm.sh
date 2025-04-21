@@ -1,4 +1,5 @@
-mv SFT_IMAGE_PLOT1 SFT_IMAGE
+export CUDA_VISIBLE_DEVICES=0,1
+
 
 CUDA_VISIBLE_DEVICES=0,1 accelerate launch  src/train.py \
     --deepspeed ds_config/ds_config.json \
@@ -13,7 +14,7 @@ CUDA_VISIBLE_DEVICES=0,1 accelerate launch  src/train.py \
     --dataset sft-image-plot1 \
     --cutoff_len 10000 \
     --learning_rate 1e-05 \
-    --num_train_epochs 1 \
+    --num_train_epochs 5 \
     --max_samples 100000 \
     --overwrite_cache True \
     --preprocessing_num_workers 2 \
@@ -22,7 +23,7 @@ CUDA_VISIBLE_DEVICES=0,1 accelerate launch  src/train.py \
     --lr_scheduler_type cosine \
     --max_grad_norm 1.0 \
     --logging_steps 10 \
-    --save_steps 200 \
+    --save_steps 1000 \
     --warmup_ratio 0.1 \
     --neftune_noise_alpha 0 \
     --output_dir /home/wzx/saves/qwen_25_vl_sft_image_plot1 \
@@ -31,67 +32,65 @@ CUDA_VISIBLE_DEVICES=0,1 accelerate launch  src/train.py \
     --ddp_timeout 180000000 \
     --bf16 True
 
-mv SFT_IMAGE SFT_IMAGE_PLOT1
 
-# CUDA_VISIBLE_DEVICES=0,1 accelerate launch  src/train.py \
-#     --deepspeed ds_config/ds_config.json \
-#     --stage sft \
-#     --do_train True \
-#     --model_name_or_path /data/wangzexin/qwen2.5_7b_vlm \
-#     --trust_remote_code True \
-#     --flash_attn fa2 \
-#     --finetuning_type full \
-#     --template qwen2_vl \
-#     --dataset_dir data \
-#     --dataset sft-image-plot2 \
-#     --cutoff_len 10000 \
-#     --learning_rate 1e-05 \
-#     --num_train_epochs 1 \
-#     --max_samples 100000 \
-#     --overwrite_cache True \
-#     --preprocessing_num_workers 2 \
-#     --per_device_train_batch_size 1 \
-#     --gradient_accumulation_steps 16 \
-#     --lr_scheduler_type cosine \
-#     --max_grad_norm 1.0 \
-#     --logging_steps 10 \
-#     --save_steps 200 \
-#     --warmup_ratio 0.1 \
-#     --neftune_noise_alpha 0 \
-#     --output_dir /home/wzx/saves/qwen_25_vl_sft_image_plot2 \
-#     --plot_loss True \
-#     --overwrite_output_dir True \
-#     --ddp_timeout 180000000 \
-#     --bf16 True
+CUDA_VISIBLE_DEVICES=0,1 accelerate launch  src/train.py \
+    --deepspeed ds_config/ds_config.json \
+    --stage sft \
+    --do_train True \
+    --model_name_or_path /data/wangzexin/qwen2.5_7b_vlm \
+    --trust_remote_code True \
+    --flash_attn fa2 \
+    --finetuning_type full \
+    --template qwen2_vl \
+    --dataset_dir data \
+    --dataset sft-image-plot2 \
+    --cutoff_len 10000 \
+    --learning_rate 1e-05 \
+    --num_train_epochs 5 \
+    --max_samples 100000 \
+    --overwrite_cache True \
+    --preprocessing_num_workers 2 \
+    --per_device_train_batch_size 1 \
+    --gradient_accumulation_steps 16 \
+    --lr_scheduler_type cosine \
+    --max_grad_norm 1.0 \
+    --logging_steps 10 \
+    --save_steps 1000 \
+    --warmup_ratio 0.1 \
+    --neftune_noise_alpha 0 \
+    --output_dir /home/wzx/saves/qwen_25_vl_sft_image_plot2 \
+    --plot_loss True \
+    --overwrite_output_dir True \
+    --ddp_timeout 180000000 \
+    --bf16 True
 
-
-# CUDA_VISIBLE_DEVICES=0,1 accelerate launch  src/train.py \
-#     --deepspeed ds_config/ds_config.json \
-#     --stage sft \
-#     --do_train True \
-#     --model_name_or_path /data/wangzexin/qwen2.5_7b_vlm \
-#     --trust_remote_code True \
-#     --flash_attn fa2 \
-#     --finetuning_type full \
-#     --template qwen2_vl \
-#     --dataset_dir data \
-#     --dataset sft-image-plot2 \
-#     --cutoff_len 10000 \
-#     --learning_rate 1e-05 \
-#     --num_train_epochs 1 \
-#     --max_samples 100000 \
-#     --overwrite_cache True \
-#     --preprocessing_num_workers 2 \
-#     --per_device_train_batch_size 1 \
-#     --gradient_accumulation_steps 16 \
-#     --lr_scheduler_type cosine \
-#     --max_grad_norm 1.0 \
-#     --logging_steps 10 \
-#     --save_steps 200 \
-#     --warmup_ratio 0.1 \
-#     --neftune_noise_alpha 0 \
-#     --output_dir /home/wzx/saves/qwen_25_vl_sft_text \
-#     --plot_loss True \
-#     --overwrite_output_dir True \
-#     --ddp_timeout 180000000 \
-#     --bf16 True
+CUDA_VISIBLE_DEVICES=0,1 accelerate launch  src/train.py \
+    --deepspeed ds_config/ds_config.json \
+    --stage sft \
+    --do_train True \
+    --model_name_or_path /data/wangzexin/qwen2.5_7b_vlm \
+    --trust_remote_code True \
+    --flash_attn fa2 \
+    --finetuning_type full \
+    --template qwen2_vl \
+    --dataset_dir data \
+    --dataset sft-text \
+    --cutoff_len 10000 \
+    --learning_rate 1e-05 \
+    --num_train_epochs 5 \
+    --max_samples 100000 \
+    --overwrite_cache True \
+    --preprocessing_num_workers 2 \
+    --per_device_train_batch_size 1 \
+    --gradient_accumulation_steps 16 \
+    --lr_scheduler_type cosine \
+    --max_grad_norm 1.0 \
+    --logging_steps 10 \
+    --save_steps 1000 \
+    --warmup_ratio 0.1 \
+    --neftune_noise_alpha 0 \
+    --output_dir /home/wzx/saves/qwen_25_vl_sft_text \
+    --plot_loss True \
+    --overwrite_output_dir True \
+    --ddp_timeout 180000000 \
+    --bf16 True

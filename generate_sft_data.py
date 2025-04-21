@@ -16,6 +16,7 @@ ONE_SHOT = False
 FEW_SHOT = False
 TYPE = 'image' # image or text or text_and_image
 COT = False
+PLOT_TYPE = "PLOT2"
 
 class TrendType(Enum):
     LINEAR = 'linear'
@@ -71,7 +72,12 @@ class TimeSeriesFeatures:
 def plot_time_series(ts: np.ndarray, features: TimeSeriesFeatures) -> List[Dict[str, Any]]:
     """将时间序列绘制成图像并返回字节字典格式列表"""
     plt.figure(figsize=(12, 6))
-    plt.plot(ts, label='Time Series', color='blue')
+    if PLOT_TYPE == "PLOT1":
+        plt.plot(ts, label='Time Series', color='blue')
+    elif PLOT_TYPE == "PLOT2":
+        plt.bar([i for i in range(len(ts))], ts, label='Time Series', color='blue')
+    else:
+        raise Exception("Not Implented")
     
     # 如果有异常，用红色标记
     # if features.has_anomalies:
@@ -87,7 +93,7 @@ def plot_time_series(ts: np.ndarray, features: TimeSeriesFeatures) -> List[Dict[
     
     # 生成唯一的文件名
     img_filename = f"ts_{uuid.uuid4().hex[:8]}.png"
-    img_path = f"./SFT_IMAGE/{img_filename}"
+    img_path = f"./SFT_IMAGE_{PLOT_TYPE}/{img_filename}"
     # 保存到本地文件系统
     plt.savefig(img_path, dpi=100, bbox_inches='tight')
     plt.close()
@@ -95,31 +101,31 @@ def plot_time_series(ts: np.ndarray, features: TimeSeriesFeatures) -> List[Dict[
     return [img_path]
 
 
-def plot_time_series2(ts: np.ndarray, features: TimeSeriesFeatures) -> List[Dict[str, Any]]:
-    """将时间序列绘制成图像并返回字节字典格式列表"""
-    plt.figure(figsize=(12, 6))
-    plt.bar([i for i in range(len(ts))], ts, label='Time Series', color='blue')
+# def plot_time_series2(ts: np.ndarray, features: TimeSeriesFeatures) -> List[Dict[str, Any]]:
+#     """将时间序列绘制成图像并返回字节字典格式列表"""
+#     plt.figure(figsize=(12, 6))
+#     plt.bar([i for i in range(len(ts))], ts, label='Time Series', color='blue')
     
-    # 如果有异常，用红色标记
-    # if features.has_anomalies:
-    #     for anomaly in features.anomalies:
-    #         start = anomaly['position']
-    #         end = start + anomaly['length']
-    #         plt.axvspan(start, end, color='red', alpha=0.3)
+#     # 如果有异常，用红色标记
+#     # if features.has_anomalies:
+#     #     for anomaly in features.anomalies:
+#     #         start = anomaly['position']
+#     #         end = start + anomaly['length']
+#     #         plt.axvspan(start, end, color='red', alpha=0.3)
     
-    # plt.grid(True)
-    plt.title('Time Series')
-    plt.xlabel('Index')
-    plt.ylabel('Value')
+#     # plt.grid(True)
+#     plt.title('Time Series')
+#     plt.xlabel('Index')
+#     plt.ylabel('Value')
     
-    # 生成唯一的文件名
-    img_filename = f"ts_{uuid.uuid4().hex[:8]}.png"
-    img_path = f"./SFT_IMAGE/{img_filename}"
-    # 保存到本地文件系统
-    plt.savefig(img_path, dpi=100, bbox_inches='tight')
-    plt.close()
+#     # 生成唯一的文件名
+#     img_filename = f"ts_{uuid.uuid4().hex[:8]}.png"
+#     img_path = f"./SFT_IMAGE/{img_filename}"
+#     # 保存到本地文件系统
+#     plt.savefig(img_path, dpi=100, bbox_inches='tight')
+#     plt.close()
     
-    return [img_path]
+#     return [img_path]
 
 
 def round_ts(ts: np.ndarray) -> np.ndarray:
@@ -1021,8 +1027,8 @@ def generate_mixed_data(num_samples: int = 100) -> List[Dict[str, Any]]:
 
 def main():
     # Ensure figures directory exists
-    os.makedirs("./SFT_IMAGE", exist_ok=True)
-    os.makedirs("./SFT_DATA", exist_ok=True)
+    os.makedirs(f"./SFT_IMAGE_{PLOT_TYPE}", exist_ok=True)
+    # os.makedirs("./SFT_DATA", exist_ok=True)
     train_num = 5000
     test_num = 400
     eval_num = 2000
