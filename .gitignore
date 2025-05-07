@@ -196,3 +196,12 @@ data/*.parquet
 
 SFT_IMAGE_PLOT1/
 SFT_IMAGE_PLOT2/
+SFT_IMAGE_PLOT3/
+SFT_IMAGE_*/
+SFT_IMAGE_frequency/
+.gradio/
+.cache/
+.DS_Store
+.vscode/
+.idea/
+.pytest_cache/

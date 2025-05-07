@@ -10,13 +10,14 @@ import io
 import base64
 import os
 import json
+from scipy.signal import spectrogram,stft
 random.seed(42)
 np.random.seed(42)
 ONE_SHOT = False
 FEW_SHOT = False
 TYPE = 'image' # image or text or text_and_image
 COT = False
-PLOT_TYPE = "PLOT2"
+PLOT_TYPE = "PLOT3"
 
 class TrendType(Enum):
     LINEAR = 'linear'
@@ -71,11 +72,76 @@ class TimeSeriesFeatures:
 
 def plot_time_series(ts: np.ndarray, features: TimeSeriesFeatures) -> List[Dict[str, Any]]:
     """将时间序列绘制成图像并返回字节字典格式列表"""
-    plt.figure(figsize=(12, 6))
     if PLOT_TYPE == "PLOT1":
+        plt.figure(figsize=(12, 6))
         plt.plot(ts, label='Time Series', color='blue')
+        plt.title('Time Series')
+        plt.xlabel('Index')
+        plt.ylabel('Value')
     elif PLOT_TYPE == "PLOT2":
+        plt.figure(figsize=(12, 6))
         plt.bar([i for i in range(len(ts))], ts, label='Time Series', color='blue')
+        plt.title('Time Series')
+        plt.xlabel('Index')
+        plt.ylabel('Value')
+    elif PLOT_TYPE == "PLOT3":
+        plt.figure(figsize=(12, 6))
+        plt.plot(ts, label='Time Series', color='blue')
+        plt.title('Time Series')
+        plt.xlabel('Index')
+        plt.ylabel('Value')
+        plt.xticks(np.arange(0, len(ts) + 1, 10))
+    elif PLOT_TYPE == "frequency":
+        fs = 100
+        index = np.arange(len(ts))
+        # 计算频谱图（设置滑窗参数避免空图）
+        f, t_spec, Sxx = spectrogram(ts, fs, nperseg=16, noverlap=2)
+        # 将 t_spec 从秒转换为索引（点位置）
+        t_index = (t_spec * fs).astype(int)
+
+        # 画图
+        # fig, axs = plt.subplots(2, 1, figsize=(12, 6), sharex=True, gridspec_kw={'height_ratios': [1, 2]})
+        fig, axs = plt.subplots(2, 1, figsize=(12, 6), sharex=True)
+
+        # 1️⃣ 时序图（x轴为 index）
+        axs[0].plot(index, ts, color='teal')
+        # 设置x轴刻度，每10个点显示一个刻度
+        xticks = np.arange(0, len(ts) + 1, 10)
+        axs[0].set_xticks(xticks)
+        axs[0].set_xticklabels([str(x) for x in xticks], fontsize=10)
+        axs[0].tick_params(axis='both', which='major', labelsize=10)  # 设置刻度标签大小
+        axs[0].set_ylabel('Amplitude', fontsize=10)
+        axs[0].set_xlabel('Index', fontsize=10)
+        axs[0].set_title('Time Series', fontsize=12)
+        axs[0].grid(True)
+
+        # 2️⃣ 频谱图（x轴为 index）
+        pcm = axs[1].pcolormesh(t_index, f, 10 * np.log10(Sxx + 1e-10), shading='gouraud', cmap='magma')
+        axs[1].set_ylabel('Frequency [Hz]')
+        axs[1].set_xlabel('Index')
+        axs[1].set_title('Spectrogram')
+    elif PLOT_TYPE == "stft":
+        fs = 1.0  
+
+        # STFT
+        f, n, Zxx = stft(ts, fs=fs, nperseg=32)
+
+        # 映射 STFT 的时间轴到索引范围
+        stft_index = np.linspace(0, len(ts), len(n))
+
+        # 绘图
+        fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 6), sharex=True)
+
+        # 上图：原始时序
+        ax1.plot(np.arange(len(ts)), ts, color='b')
+        ax1.set_title("Time Series (Index-based)")
+        ax1.set_ylabel("Value")
+
+        # 下图：STFT 频谱图（幅值谱）
+        im = ax2.pcolormesh(stft_index, f, np.abs(Zxx), shading='gouraud', cmap='viridis')
+        ax2.set_title("STFT Magnitude Spectrum")
+        ax2.set_ylabel("Frequency")
+        ax2.set_xlabel("Index")
     else:
         raise Exception("Not Implented")
     
@@ -87,9 +153,6 @@ def plot_time_series(ts: np.ndarray, features: TimeSeriesFeatures) -> List[Dict[
     #         plt.axvspan(start, end, color='red', alpha=0.3)
     
     # plt.grid(True)
-    plt.title('Time Series')
-    plt.xlabel('Index')
-    plt.ylabel('Value')
     
     # 生成唯一的文件名
     img_filename = f"ts_{uuid.uuid4().hex[:8]}.png"
@@ -466,6 +529,10 @@ def generate_question(ts: np.ndarray, features: TimeSeriesFeatures) -> Dict[str,
         )
     if TYPE == 'image':
         img_path = plot_time_series(ts, features)
+        # if PLOT_TYPE == 'stft':
+        #     question = f"<image>Given time series visualization, analyze the time series and detect anomalies.\n\n"
+        # else:
+        #     question = f"<image>Given time series visualization, analyze the time series and detect anomalies.\n\n"
         question = f"<image>Given time series visualization, analyze the time series and detect anomalies.\n\n"
     elif TYPE == 'text':
         img_path = []
@@ -563,7 +630,8 @@ def generate_question(ts: np.ndarray, features: TimeSeriesFeatures) -> Dict[str,
     return {
         'images': img_path,
         'problem': problem,
-        'solution': solution
+        'solution': solution,
+        'anomalies': features.anomalies
     }
 
 def get_trend_description(features: TimeSeriesFeatures) -> str:
@@ -780,7 +848,8 @@ def generate_shaplet_question(ts: np.ndarray, features: TimeSeriesFeatures) -> D
     return {
         'images': img_path,
         'problem': problem_description,
-        'solution': solution
+        'solution': solution,
+        'anomalies': features.anomalies
     }
 
 def generate_basic_question(ts: np.ndarray, features: TimeSeriesFeatures) -> Dict[str, Any]:
@@ -882,7 +951,8 @@ def generate_basic_question(ts: np.ndarray, features: TimeSeriesFeatures) -> Dic
         'images': img_path,
         'problem': problem_description,
         'solution': solution,
-        'question_type': question_type  # 额外记录问题类型以便分析
+        'question_type': question_type,  # 额外记录问题类型以便分析
+        'anomalies': features.anomalies
     }
 
 def generate_data(num_samples: int = 100) -> List[Dict[str, Any]]:
@@ -964,6 +1034,7 @@ def generate_basic_data(num_samples: int = 100) -> List[Dict[str, Any]]:
 def generate_mixed_data(num_samples: int = 100) -> List[Dict[str, Any]]:
     """生成混合类型的时间序列问题数据（随机选择普通问题或shapelet问题）"""
     data = []
+    label = []
     used_ids = set()
     
     for _ in range(num_samples):
@@ -1023,6 +1094,9 @@ def generate_mixed_data(num_samples: int = 100) -> List[Dict[str, Any]]:
                     }
                 ]
             })
+        label.append({'type': [item['type'].value for item in features.anomalies]})
+    with open('./data/eval_label.json','w') as f:
+        json.dump(label, f)
     return data
 
 def main():
@@ -1051,15 +1125,15 @@ def main():
         print("生成评估数据...")
         eval_data = generate_mixed_data(eval_num)
 
-        with open(f'./data/ts_train_{TYPE}_{data_type}.json', 'w') as f:
+        with open(f'./data/ts_train_{TYPE}_{data_type}_{PLOT_TYPE}.json', 'w') as f:
             json.dump(train_data, f)
         # with open(f'./SFT_DATA/ts_test_{TYPE}_{data_type}.json', 'w') as f:
         #     json.dump(test_data, f)
-        with open(f'./data/ts_eval_{TYPE}_{data_type}.json', 'w') as f:
+        with open(f'./data/ts_eval_{TYPE}_{data_type}_{PLOT_TYPE}.json', 'w') as f:
             json.dump(eval_data, f)
 
-        eval_df = pd.DataFrame(eval_data)
-        eval_df.to_parquet(f'./data/ts_eval_{TYPE}_{data_type}.parquet')
+        # eval_df = pd.DataFrame(eval_data)
+        # eval_df.to_parquet(f'./data/ts_eval_{TYPE}_{data_type}.parquet')
         
     elif data_type == "shaplet":
         print("生成shaplet格式的时间序列异常检测数据...")

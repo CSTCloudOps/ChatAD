@@ -18,6 +18,7 @@ from qwen_vl_utils import process_vision_info
 
 ONE_SHOT = False
 FEW_SHOT = False
+COT = True
 
 def extract_boxed_content(text: str) -> Union[str, None]:
     """从文本中提取最后一个 \boxed{} 中的内容"""
@@ -304,10 +305,11 @@ def main(TYPE: str = "image"):
     total_fp = 0
     total_fn = 0
     results = []
-    
+    with open('./data/eval_label.json', 'r') as f:
+        label = json.load(f)
     # df = df[:2]
     # 遍历每个样本进行评估
-    for item in df:
+    for item,item_label in zip(df, label):
         # 从row中获取图像数据
         try:
             image_path = item['images'][0] # 获取第一个（也是唯一的）图像数据  # 获取图像字节数据
@@ -378,7 +380,9 @@ def main(TYPE: str = "image"):
             'recall': recall,
             'tp': tp,
             'fp': fp,
-            'fn': fn
+            'fn': fn,
+            'anomaly_type':item_label['type'],
+            'image_path': image_path
         })
         
         print(f"F1: {f1:.4f}, Precision: {precision:.4f}, Recall: {recall:.4f}")

@@ -66,6 +66,48 @@
       "assistant_tag": "assistant"
     }
   },
+  "sft-vision-encoder": {
+    "file_name": "ts_train_image_description_PLOT1.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "sft-image-frequency": {
+    "file_name": "ts_train_image_mixed_frequency.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "sft-image-stft": {
+    "file_name": "ts_train_image_mixed_stft.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
   "sft-text": {
     "file_name": "ts_train_text_mixed.json",
     "formatting": "sharegpt",
