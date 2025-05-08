@@ -39,7 +39,7 @@
     }
   },
   "sft-image-plot1": {
-    "file_name": "ts_train_image_mixed_plot1.json",
+    "file_name": "ts_train_image_mixed_PLOT1.json",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
@@ -68,6 +68,20 @@
   },
   "sft-vision-encoder": {
     "file_name": "ts_train_image_description_PLOT1.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "sft-vision-encoder-new": {
+    "file_name": "ts_train_image_description_PLOT1_new.json",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",

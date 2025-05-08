@@ -1310,15 +1310,42 @@ def generate_description_data(num_samples: int = 100) -> List[Dict[str, Any]]:
                 used_ids.add(new_id)
                 break
 
-        data.append(
-            {
-                "id": new_id,
-                "images": qa["images"],
-                "problem": qa["problem"],
-                "solution": qa["solution"],
-                "ts_length": ts_length,  # 添加问题类型标记
-            }
-        )
+        # data.append(
+        #     {
+        #         "id": new_id,
+        #         "images": qa["images"],
+        #         "problem": qa["problem"],
+        #         "solution": qa["solution"],
+        #         "ts_length": ts_length,  # 添加问题类型标记
+        #     }
+        # )
+        if qa['images'] is not None:
+            data.append({
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": qa['problem']
+                    },
+                    {
+                        "role": "assistant",
+                        "content": qa['solution']
+                    }
+                ],
+                "images": qa['images'],
+            })
+        else:
+            data.append({
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": qa['problem']
+                    },
+                    {
+                        "role": "assistant",
+                        "content": qa['solution']
+                    }
+                ]
+            })
     return data
 
 
@@ -1467,7 +1494,7 @@ def main():
     # Ensure figures directory exists
     os.makedirs(f"./SFT_IMAGE_{PLOT_TYPE}", exist_ok=True)
     # train_num = 5000
-    train_num = 400
+    train_num = 5000
     test_num = 400
     eval_num = 2000
     # train_num = 1000
