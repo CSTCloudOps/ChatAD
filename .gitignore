@@ -215,4 +215,4 @@ test.py
 test.png
 test.json
 
-eval/llm_baseline/*.json
+eval/anollm/*.json
