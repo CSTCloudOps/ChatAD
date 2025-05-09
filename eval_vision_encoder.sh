@@ -1,0 +1,2 @@
+export CUDA_VISIBLE_DEVICES=1
+python eval/eval_normal.py --model_path /data/wangzexin/saves/qwen_25_vl_sft_all_after_sft_vision_tower_new --data_path ./data/ts_eval_image_mixed_plot1.json --output_path ./eval/image_plot1_sft_vit_sft_all.json

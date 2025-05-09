@@ -205,7 +205,7 @@ def image_to_base64(image_bytes: bytes) -> str:
 
 
 def process_input(
-    model_type: str, processor: Any, prompt: str, image_path: str
+    model_type: str, processor: Any, messages: List[Dict]
 ) -> Dict:
     """
     处理输入，根据模型类型返回适当的输入格式
@@ -213,27 +213,15 @@ def process_input(
     Args:
         model_type: 模型类型
         processor: 处理器（可能是tokenizer或processor）
-        prompt: 提示词
-        image_bytes: 图像字节数据（如果有的话）
+        messages: 消息列表，每个消息包含role和content
     """
-    print(model_type)
-    if model_type == "qwen2_5_vl" and image_path is not None:
-        # 构建消息格式
-        messages = [
-            {
-                "role": "user",
-                "content": [
-                    {"type": "image", "image": image_path},
-                    {"type": "text", "text": prompt},
-                ],
-            }
-        ]
+    if model_type == "qwen2_5_vl":
         # 使用处理器处理输入
+        print(messages)
         text = processor.apply_chat_template(
             messages, tokenize=False, add_generation_prompt=True
         )
         image_inputs, video_inputs = process_vision_info(messages)
-        # inputs = processor(text=text, return_tensors="pt")
         inputs = processor(
             text=[text],
             images=image_inputs,
@@ -242,56 +230,35 @@ def process_input(
             return_tensors="pt",
         )
         return inputs
-    elif model_type == "qwen2_5_vl" and image_path is None:
-        # 构建消息格式
-        messages = [
-            {
-                "role": "user",
-                "content": [
-                    # {"type": "image", "image": image_base64},
-                    {"type": "text", "text": prompt}
-                ],
-            }
-        ]
-        # 使用处理器处理输入
-        text = processor.apply_chat_template(
-            messages, tokenize=False, add_generation_prompt=True
-        )
-        # image_inputs, video_inputs = process_vision_info(messages)
-        # inputs = processor(text=text, return_tensors="pt")
-        inputs = processor(
-            text=[text],
-            # images=image_inputs,
-            # videos=video_inputs,
-            padding=True,
-            return_tensors="pt",
-        )
-        return inputs
     else:
-        messages = [
-            {
-                "role": "system",
-                "content": "You are Qwen, created by Alibaba Cloud. You are a helpful assistant.",
-            },
-            {"role": "user", "content": prompt},
-        ]
-        text = processor.apply_chat_template(
-            messages, tokenize=False, add_generation_prompt=True
-        )
-        return processor([text], return_tensors="pt")
+        # 对于非VL模型，我们只处理文本内容
+        text_only_messages = []
+        for msg in messages:
+            if msg["role"] == "user":
+                text_content = ""
+                for content in msg["content"]:
+                    if content["type"] == "text":
+                        text_content += content["text"]
+                text_only_messages.append({"role": "user", "content": text_content})
+            else:
+                text_only_messages.append(msg)
+        
+        inputs = processor.apply_chat_template(text_only_messages, return_tensors="pt")
+        return inputs
 
 
-def main(TYPE: str = "image"):
-    parser = argparse.ArgumentParser(
-        description="Evaluate model on time series anomaly detection"
-    )
+def main():
+    parser = argparse.ArgumentParser()
     parser.add_argument(
-        "--model_path", type=str, required=True, help="Path to the model"
+        "--model_path",
+        type=str,
+        default="Qwen/Qwen-VL-Chat",
+        help="Path to the model",
     )
     parser.add_argument(
         "--data_path",
         type=str,
-        default="../data/ts_figure_eval.parquet",
+        default="./data/eval_data.json",
         help="Path to the evaluation data",
     )
     parser.add_argument(
@@ -316,30 +283,15 @@ def main(TYPE: str = "image"):
     total_fp = 0
     total_fn = 0
     results = []
-    try:
-        with open("./data/eval_label.json", "r") as f:
-            label = json.load(f)
-    except:
-        label = [{"type": ""} for i in range(len(df))]
+    # with open("./data/eval_label.json", "r") as f:
+    #     label = json.load(f)
 
-    for item, item_label in zip(df, label):
-        try:
-            image_path = item["images"][
-                0
-            ]
-        except:
-            image_path = None
-
-        prompt = item["messages"][0]["content"]
-        if (
-            "Write anomalous intervals (final answer) using python list format in"
-            not in prompt
-        ):
-            continue
-        prompt += "Do not overlap anomalous intervals.\n"
-
-        inputs = process_input(model_type, processor, prompt, image_path)
+    for item in df:
+        # 处理输入
+        inputs = process_input(model_type, processor, item["messages"][:-1])
         inputs = inputs.to(model.device)
+        
+        # 生成回答
         generated_ids = model.generate(
             **inputs, max_new_tokens=512, repetition_penalty=1.1
         )
@@ -352,32 +304,40 @@ def main(TYPE: str = "image"):
             skip_special_tokens=True,
             clean_up_tokenization_spaces=False,
         )
-        print(response)
-        # print("Ground Truth:", item["messages"][1]["content"])
+        print("Model Response:", response)
+        # print("Ground Truth:", item["messages"][-1]["content"])
+
         # 提取预测的异常区间
         pred_intervals = extract_anomaly_intervals(response[0])
         if pred_intervals is None:
             pred_intervals = []
 
-        # 从solution中提取真实的异常区间
-        gt_intervals = extract_anomaly_intervals(item["messages"][1]["content"])
+        # 从ground truth中提取真实的异常区间
+        gt_text = item["messages"][-1]["content"][0]["text"] if isinstance(item["messages"][1]["content"], list) else item["messages"][1]["content"]
+        gt_intervals = extract_anomaly_intervals(gt_text)
         if gt_intervals is None:
             gt_intervals = []
-
+        print("pred_intervals:", pred_intervals, "gt_intervals:", gt_intervals)
         # 计算point-adjust F1分数
         f1, precision, recall, tp, fp, fn = point_adjust_f1(
             pred_intervals, gt_intervals, ts_length=1000  # 使用实际的时间序列长度
         )
-        print("pred_intervals, gt_intervals", pred_intervals, gt_intervals)
+
         # 累积统计量
         total_tp += tp
         total_fp += fp
         total_fn += fn
 
+        # 获取图像路径（如果存在）
+        image_path = None
+        for content in item["messages"][-1]["content"]:
+            if content["type"] == "image":
+                image_path = content["image"]
+                break
+
         # 保存结果
         results.append(
             {
-                # 'sample_id': idx,
                 "prediction": pred_intervals,
                 "ground_truth": gt_intervals,
                 "f1": f1,
@@ -386,17 +346,15 @@ def main(TYPE: str = "image"):
                 "tp": tp,
                 "fp": fp,
                 "fn": fn,
-                "anomaly_type": item_label["type"],
+                # "anomaly_type": item_label["type"],
                 "image_path": image_path,
             }
         )
 
         print(f"F1: {f1:.4f}, Precision: {precision:.4f}, Recall: {recall:.4f}")
-        # break
+
     # 计算总体指标
-    total_precision = (
-        total_tp / (total_tp + total_fp) if (total_tp + total_fp) > 0 else 0
-    )
+    total_precision = total_tp / (total_tp + total_fp) if (total_tp + total_fp) > 0 else 0
     total_recall = total_tp / (total_tp + total_fn) if (total_tp + total_fn) > 0 else 0
     total_f1 = (
         2 * total_precision * total_recall / (total_precision + total_recall)
@@ -435,5 +393,8 @@ def main(TYPE: str = "image"):
 
 
 if __name__ == "__main__":
-    main(TYPE="text")
+    main()
     # print(point_adjust_f1([[46,55]], [[49,55]], 200))
+
+
+#
