@@ -1,0 +1,3313 @@
+[
+    {
+        "file": "A4Benchmark-TS44.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.10185185185185185,
+        "f1": 0.10526315789473684,
+        "tp": 11,
+        "fp": 90,
+        "fn": 97
+    },
+    {
+        "file": "A4Benchmark-TS65.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.11956521739130435,
+        "f1": 0.11398963730569947,
+        "tp": 11,
+        "fp": 90,
+        "fn": 81
+    },
+    {
+        "file": "A3Benchmark-TS57.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 11
+    },
+    {
+        "file": "synthetic_10.csv",
+        "precision": 0.1188118811881188,
+        "recall": 1.0,
+        "f1": 0.21238938053097342,
+        "tp": 12,
+        "fp": 89,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS75.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 66
+    },
+    {
+        "file": "A3Benchmark-TS24.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 41
+    },
+    {
+        "file": "real_63.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 13
+    },
+    {
+        "file": "real_37.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 54
+    },
+    {
+        "file": "A3Benchmark-TS27.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 22
+    },
+    {
+        "file": "synthetic_22.csv",
+        "precision": 0.1188118811881188,
+        "recall": 1.0,
+        "f1": 0.21238938053097342,
+        "tp": 12,
+        "fp": 89,
+        "fn": 0
+    },
+    {
+        "file": "synthetic_95.csv",
+        "precision": 0.12871287128712872,
+        "recall": 1.0,
+        "f1": 0.22807017543859648,
+        "tp": 13,
+        "fp": 88,
+        "fn": 0
+    },
+    {
+        "file": "real_26.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 89
+    },
+    {
+        "file": "synthetic_59.csv",
+        "precision": 0.12871287128712872,
+        "recall": 1.0,
+        "f1": 0.22807017543859648,
+        "tp": 13,
+        "fp": 88,
+        "fn": 0
+    },
+    {
+        "file": "synthetic_38.csv",
+        "precision": 0.12871287128712872,
+        "recall": 1.0,
+        "f1": 0.22807017543859648,
+        "tp": 13,
+        "fp": 88,
+        "fn": 0
+    },
+    {
+        "file": "real_24.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 30
+    },
+    {
+        "file": "A3Benchmark-TS19.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.18032786885245902,
+        "f1": 0.13580246913580246,
+        "tp": 11,
+        "fp": 90,
+        "fn": 50
+    },
+    {
+        "file": "A4Benchmark-TS8.csv",
+        "precision": 0.0990990990990991,
+        "recall": 0.16666666666666666,
+        "f1": 0.12429378531073446,
+        "tp": 11,
+        "fp": 100,
+        "fn": 55
+    },
+    {
+        "file": "real_44.csv",
+        "precision": 0.0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 0
+    },
+    {
+        "file": "real_43.csv",
+        "precision": 0.12871287128712872,
+        "recall": 0.2765957446808511,
+        "f1": 0.17567567567567569,
+        "tp": 13,
+        "fp": 88,
+        "fn": 34
+    },
+    {
+        "file": "real_17.csv",
+        "precision": 0.5662100456621004,
+        "recall": 0.49206349206349204,
+        "f1": 0.5265392781316348,
+        "tp": 124,
+        "fp": 95,
+        "fn": 128
+    },
+    {
+        "file": "A4Benchmark-TS82.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 22
+    },
+    {
+        "file": "real_5.csv",
+        "precision": 0.0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 0
+    },
+    {
+        "file": "A3Benchmark-TS37.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 55
+    },
+    {
+        "file": "A4Benchmark-TS26.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.5,
+        "f1": 0.17886178861788618,
+        "tp": 11,
+        "fp": 90,
+        "fn": 11
+    },
+    {
+        "file": "A4Benchmark-TS20.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.14285714285714285,
+        "f1": 0.12359550561797754,
+        "tp": 11,
+        "fp": 90,
+        "fn": 66
+    },
+    {
+        "file": "synthetic_84.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "A3Benchmark-TS77.csv",
+        "precision": 0.102803738317757,
+        "recall": 0.1111111111111111,
+        "f1": 0.10679611650485435,
+        "tp": 11,
+        "fp": 96,
+        "fn": 88
+    },
+    {
+        "file": "synthetic_21.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "synthetic_63.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "synthetic_37.csv",
+        "precision": 0.1188118811881188,
+        "recall": 1.0,
+        "f1": 0.21238938053097342,
+        "tp": 12,
+        "fp": 89,
+        "fn": 0
+    },
+    {
+        "file": "synthetic_97.csv",
+        "precision": 0.1188118811881188,
+        "recall": 1.0,
+        "f1": 0.21238938053097342,
+        "tp": 12,
+        "fp": 89,
+        "fn": 0
+    },
+    {
+        "file": "synthetic_50.csv",
+        "precision": 0.12871287128712872,
+        "recall": 1.0,
+        "f1": 0.22807017543859648,
+        "tp": 13,
+        "fp": 88,
+        "fn": 0
+    },
+    {
+        "file": "A3Benchmark-TS98.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.2,
+        "f1": 0.14102564102564105,
+        "tp": 11,
+        "fp": 90,
+        "fn": 44
+    },
+    {
+        "file": "A4Benchmark-TS83.csv",
+        "precision": 0.0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 0
+    },
+    {
+        "file": "A3Benchmark-TS40.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.2,
+        "f1": 0.14102564102564105,
+        "tp": 11,
+        "fp": 90,
+        "fn": 44
+    },
+    {
+        "file": "synthetic_44.csv",
+        "precision": 0.12871287128712872,
+        "recall": 1.0,
+        "f1": 0.22807017543859648,
+        "tp": 13,
+        "fp": 88,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS74.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 11
+    },
+    {
+        "file": "real_8.csv",
+        "precision": 0.22549019607843138,
+        "recall": 0.575,
+        "f1": 0.323943661971831,
+        "tp": 23,
+        "fp": 79,
+        "fn": 17
+    },
+    {
+        "file": "A3Benchmark-TS3.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 44
+    },
+    {
+        "file": "real_1.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 13
+    },
+    {
+        "file": "synthetic_47.csv",
+        "precision": 0.12871287128712872,
+        "recall": 1.0,
+        "f1": 0.22807017543859648,
+        "tp": 13,
+        "fp": 88,
+        "fn": 0
+    },
+    {
+        "file": "A3Benchmark-TS70.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.16666666666666666,
+        "f1": 0.13173652694610777,
+        "tp": 11,
+        "fp": 90,
+        "fn": 55
+    },
+    {
+        "file": "A3Benchmark-TS90.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.16666666666666666,
+        "f1": 0.13173652694610777,
+        "tp": 11,
+        "fp": 90,
+        "fn": 55
+    },
+    {
+        "file": "A3Benchmark-TS20.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.21568627450980393,
+        "f1": 0.14473684210526316,
+        "tp": 11,
+        "fp": 90,
+        "fn": 40
+    },
+    {
+        "file": "A4Benchmark-TS28.csv",
+        "precision": 0.21782178217821782,
+        "recall": 0.2857142857142857,
+        "f1": 0.24719101123595508,
+        "tp": 22,
+        "fp": 79,
+        "fn": 55
+    },
+    {
+        "file": "synthetic_60.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "synthetic_26.csv",
+        "precision": 0.12871287128712872,
+        "recall": 1.0,
+        "f1": 0.22807017543859648,
+        "tp": 13,
+        "fp": 88,
+        "fn": 0
+    },
+    {
+        "file": "A3Benchmark-TS95.csv",
+        "precision": 0.2018348623853211,
+        "recall": 0.2857142857142857,
+        "f1": 0.23655913978494625,
+        "tp": 22,
+        "fp": 87,
+        "fn": 55
+    },
+    {
+        "file": "A3Benchmark-TS71.csv",
+        "precision": 0.102803738317757,
+        "recall": 0.125,
+        "f1": 0.11282051282051281,
+        "tp": 11,
+        "fp": 96,
+        "fn": 77
+    },
+    {
+        "file": "synthetic_33.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "A3Benchmark-TS9.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 55
+    },
+    {
+        "file": "A3Benchmark-TS30.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 43
+    },
+    {
+        "file": "A4Benchmark-TS54.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 11
+    },
+    {
+        "file": "A3Benchmark-TS81.csv",
+        "precision": 0.21782178217821782,
+        "recall": 0.25,
+        "f1": 0.23280423280423282,
+        "tp": 22,
+        "fp": 79,
+        "fn": 66
+    },
+    {
+        "file": "A4Benchmark-TS69.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 11
+    },
+    {
+        "file": "A3Benchmark-TS72.csv",
+        "precision": 0.10091743119266056,
+        "recall": 1.0,
+        "f1": 0.18333333333333332,
+        "tp": 11,
+        "fp": 98,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS45.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 66
+    },
+    {
+        "file": "synthetic_51.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS63.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 22
+    },
+    {
+        "file": "synthetic_85.csv",
+        "precision": 0.1188118811881188,
+        "recall": 1.0,
+        "f1": 0.21238938053097342,
+        "tp": 12,
+        "fp": 89,
+        "fn": 0
+    },
+    {
+        "file": "synthetic_27.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS52.csv",
+        "precision": 0.2,
+        "recall": 0.3333333333333333,
+        "f1": 0.25,
+        "tp": 22,
+        "fp": 88,
+        "fn": 44
+    },
+    {
+        "file": "synthetic_96.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS38.csv",
+        "precision": 0.21782178217821782,
+        "recall": 0.5116279069767442,
+        "f1": 0.3055555555555556,
+        "tp": 22,
+        "fp": 79,
+        "fn": 21
+    },
+    {
+        "file": "A4Benchmark-TS33.csv",
+        "precision": 0.21782178217821782,
+        "recall": 0.6666666666666666,
+        "f1": 0.3283582089552239,
+        "tp": 22,
+        "fp": 79,
+        "fn": 11
+    },
+    {
+        "file": "real_28.csv",
+        "precision": 0.7946428571428571,
+        "recall": 0.8018018018018018,
+        "f1": 0.7982062780269059,
+        "tp": 89,
+        "fp": 23,
+        "fn": 22
+    },
+    {
+        "file": "A4Benchmark-TS79.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 11
+    },
+    {
+        "file": "real_21.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 26
+    },
+    {
+        "file": "synthetic_70.csv",
+        "precision": 0.1188118811881188,
+        "recall": 1.0,
+        "f1": 0.21238938053097342,
+        "tp": 12,
+        "fp": 89,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS71.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.25,
+        "f1": 0.15172413793103448,
+        "tp": 11,
+        "fp": 90,
+        "fn": 33
+    },
+    {
+        "file": "A4Benchmark-TS34.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 22
+    },
+    {
+        "file": "A3Benchmark-TS16.csv",
+        "precision": 0.10476190476190476,
+        "recall": 0.16666666666666666,
+        "f1": 0.12865497076023394,
+        "tp": 11,
+        "fp": 94,
+        "fn": 55
+    },
+    {
+        "file": "A4Benchmark-TS13.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 44
+    },
+    {
+        "file": "synthetic_69.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "synthetic_66.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "real_55.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 34
+    },
+    {
+        "file": "A4Benchmark-TS3.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 44
+    },
+    {
+        "file": "synthetic_3.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "real_18.csv",
+        "precision": 0.0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 0
+    },
+    {
+        "file": "real_39.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 22
+    },
+    {
+        "file": "A3Benchmark-TS18.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 55
+    },
+    {
+        "file": "A3Benchmark-TS43.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 66
+    },
+    {
+        "file": "A4Benchmark-TS100.csv",
+        "precision": 0.1,
+        "recall": 0.25,
+        "f1": 0.14285714285714288,
+        "tp": 11,
+        "fp": 99,
+        "fn": 33
+    },
+    {
+        "file": "synthetic_74.csv",
+        "precision": 0.12871287128712872,
+        "recall": 1.0,
+        "f1": 0.22807017543859648,
+        "tp": 13,
+        "fp": 88,
+        "fn": 0
+    },
+    {
+        "file": "synthetic_83.csv",
+        "precision": 0.12871287128712872,
+        "recall": 1.0,
+        "f1": 0.22807017543859648,
+        "tp": 13,
+        "fp": 88,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS16.csv",
+        "precision": 0.0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS95.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.3333333333333333,
+        "f1": 0.16417910447761194,
+        "tp": 11,
+        "fp": 90,
+        "fn": 22
+    },
+    {
+        "file": "A4Benchmark-TS73.csv",
+        "precision": 0.2018348623853211,
+        "recall": 0.5,
+        "f1": 0.28758169934640526,
+        "tp": 22,
+        "fp": 87,
+        "fn": 22
+    },
+    {
+        "file": "A4Benchmark-TS72.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.5,
+        "f1": 0.17886178861788618,
+        "tp": 11,
+        "fp": 90,
+        "fn": 11
+    },
+    {
+        "file": "synthetic_8.csv",
+        "precision": 0.12871287128712872,
+        "recall": 1.0,
+        "f1": 0.22807017543859648,
+        "tp": 13,
+        "fp": 88,
+        "fn": 0
+    },
+    {
+        "file": "real_11.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 29
+    },
+    {
+        "file": "A3Benchmark-TS34.csv",
+        "precision": 0.0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS7.csv",
+        "precision": 0.21782178217821782,
+        "recall": 0.3333333333333333,
+        "f1": 0.26347305389221554,
+        "tp": 22,
+        "fp": 79,
+        "fn": 44
+    },
+    {
+        "file": "A4Benchmark-TS81.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.2,
+        "f1": 0.14102564102564105,
+        "tp": 11,
+        "fp": 90,
+        "fn": 44
+    },
+    {
+        "file": "synthetic_68.csv",
+        "precision": 0.12871287128712872,
+        "recall": 1.0,
+        "f1": 0.22807017543859648,
+        "tp": 13,
+        "fp": 88,
+        "fn": 0
+    },
+    {
+        "file": "real_64.csv",
+        "precision": 0.0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS11.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 37
+    },
+    {
+        "file": "synthetic_48.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "A3Benchmark-TS26.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.25,
+        "f1": 0.15172413793103448,
+        "tp": 11,
+        "fp": 90,
+        "fn": 33
+    },
+    {
+        "file": "A4Benchmark-TS14.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.171875,
+        "f1": 0.13333333333333333,
+        "tp": 11,
+        "fp": 90,
+        "fn": 53
+    },
+    {
+        "file": "real_61.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 6
+    },
+    {
+        "file": "A4Benchmark-TS89.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.16666666666666666,
+        "f1": 0.13173652694610777,
+        "tp": 11,
+        "fp": 90,
+        "fn": 55
+    },
+    {
+        "file": "A3Benchmark-TS87.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 18
+    },
+    {
+        "file": "A3Benchmark-TS35.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 11
+    },
+    {
+        "file": "real_7.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 58
+    },
+    {
+        "file": "A3Benchmark-TS91.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 22
+    },
+    {
+        "file": "A3Benchmark-TS73.csv",
+        "precision": 0.21782178217821782,
+        "recall": 0.22916666666666666,
+        "f1": 0.2233502538071066,
+        "tp": 22,
+        "fp": 79,
+        "fn": 74
+    },
+    {
+        "file": "real_25.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 48
+    },
+    {
+        "file": "A4Benchmark-TS85.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.125,
+        "f1": 0.11640211640211641,
+        "tp": 11,
+        "fp": 90,
+        "fn": 77
+    },
+    {
+        "file": "real_4.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 32
+    },
+    {
+        "file": "A3Benchmark-TS51.csv",
+        "precision": 0.21568627450980393,
+        "recall": 0.25,
+        "f1": 0.23157894736842105,
+        "tp": 22,
+        "fp": 80,
+        "fn": 66
+    },
+    {
+        "file": "real_32.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 67
+    },
+    {
+        "file": "synthetic_54.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "real_10.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 18
+    },
+    {
+        "file": "real_52.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 39
+    },
+    {
+        "file": "synthetic_41.csv",
+        "precision": 0.12871287128712872,
+        "recall": 1.0,
+        "f1": 0.22807017543859648,
+        "tp": 13,
+        "fp": 88,
+        "fn": 0
+    },
+    {
+        "file": "synthetic_16.csv",
+        "precision": 0.1188118811881188,
+        "recall": 1.0,
+        "f1": 0.21238938053097342,
+        "tp": 12,
+        "fp": 89,
+        "fn": 0
+    },
+    {
+        "file": "A3Benchmark-TS94.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 22
+    },
+    {
+        "file": "A4Benchmark-TS42.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 11
+    },
+    {
+        "file": "real_47.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 28
+    },
+    {
+        "file": "synthetic_32.csv",
+        "precision": 0.12871287128712872,
+        "recall": 1.0,
+        "f1": 0.22807017543859648,
+        "tp": 13,
+        "fp": 88,
+        "fn": 0
+    },
+    {
+        "file": "real_42.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 64
+    },
+    {
+        "file": "synthetic_64.csv",
+        "precision": 0.1188118811881188,
+        "recall": 1.0,
+        "f1": 0.21238938053097342,
+        "tp": 12,
+        "fp": 89,
+        "fn": 0
+    },
+    {
+        "file": "A3Benchmark-TS89.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 59
+    },
+    {
+        "file": "real_19.csv",
+        "precision": 0.5668202764976958,
+        "recall": 0.4880952380952381,
+        "f1": 0.5245202558635395,
+        "tp": 123,
+        "fp": 94,
+        "fn": 129
+    },
+    {
+        "file": "synthetic_9.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "real_46.csv",
+        "precision": 0.8357142857142857,
+        "recall": 0.841726618705036,
+        "f1": 0.8387096774193549,
+        "tp": 117,
+        "fp": 23,
+        "fn": 22
+    },
+    {
+        "file": "A4Benchmark-TS12.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 33
+    },
+    {
+        "file": "A3Benchmark-TS5.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 11
+    },
+    {
+        "file": "A3Benchmark-TS76.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.3333333333333333,
+        "f1": 0.16417910447761194,
+        "tp": 11,
+        "fp": 90,
+        "fn": 22
+    },
+    {
+        "file": "synthetic_46.csv",
+        "precision": 0.1188118811881188,
+        "recall": 1.0,
+        "f1": 0.21238938053097342,
+        "tp": 12,
+        "fp": 89,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS17.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.2972972972972973,
+        "f1": 0.15942028985507248,
+        "tp": 11,
+        "fp": 90,
+        "fn": 26
+    },
+    {
+        "file": "A3Benchmark-TS13.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 33
+    },
+    {
+        "file": "real_34.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 36
+    },
+    {
+        "file": "synthetic_49.csv",
+        "precision": 0.1188118811881188,
+        "recall": 1.0,
+        "f1": 0.21238938053097342,
+        "tp": 12,
+        "fp": 89,
+        "fn": 0
+    },
+    {
+        "file": "A3Benchmark-TS6.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 33
+    },
+    {
+        "file": "synthetic_7.csv",
+        "precision": 0.1188118811881188,
+        "recall": 1.0,
+        "f1": 0.21238938053097342,
+        "tp": 12,
+        "fp": 89,
+        "fn": 0
+    },
+    {
+        "file": "real_36.csv",
+        "precision": 0.0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 0
+    },
+    {
+        "file": "synthetic_18.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS57.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 44
+    },
+    {
+        "file": "synthetic_87.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS64.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.36666666666666664,
+        "f1": 0.16793893129770993,
+        "tp": 11,
+        "fp": 90,
+        "fn": 19
+    },
+    {
+        "file": "A3Benchmark-TS33.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.25,
+        "f1": 0.15172413793103448,
+        "tp": 11,
+        "fp": 90,
+        "fn": 33
+    },
+    {
+        "file": "real_60.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 38
+    },
+    {
+        "file": "A3Benchmark-TS29.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.3333333333333333,
+        "f1": 0.16417910447761194,
+        "tp": 11,
+        "fp": 90,
+        "fn": 22
+    },
+    {
+        "file": "A3Benchmark-TS54.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 89
+    },
+    {
+        "file": "synthetic_98.csv",
+        "precision": 0.12871287128712872,
+        "recall": 1.0,
+        "f1": 0.22807017543859648,
+        "tp": 13,
+        "fp": 88,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS40.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 22
+    },
+    {
+        "file": "A3Benchmark-TS38.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 11
+    },
+    {
+        "file": "A4Benchmark-TS31.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 22
+    },
+    {
+        "file": "A4Benchmark-TS60.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 22
+    },
+    {
+        "file": "synthetic_94.csv",
+        "precision": 0.1188118811881188,
+        "recall": 1.0,
+        "f1": 0.21238938053097342,
+        "tp": 12,
+        "fp": 89,
+        "fn": 0
+    },
+    {
+        "file": "A3Benchmark-TS53.csv",
+        "precision": 0.20754716981132076,
+        "recall": 0.2,
+        "f1": 0.20370370370370372,
+        "tp": 22,
+        "fp": 84,
+        "fn": 88
+    },
+    {
+        "file": "synthetic_35.csv",
+        "precision": 0.12871287128712872,
+        "recall": 1.0,
+        "f1": 0.22807017543859648,
+        "tp": 13,
+        "fp": 88,
+        "fn": 0
+    },
+    {
+        "file": "A3Benchmark-TS96.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.25,
+        "f1": 0.15172413793103448,
+        "tp": 11,
+        "fp": 90,
+        "fn": 33
+    },
+    {
+        "file": "A4Benchmark-TS5.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 22
+    },
+    {
+        "file": "A3Benchmark-TS85.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 44
+    },
+    {
+        "file": "synthetic_4.csv",
+        "precision": 0.1188118811881188,
+        "recall": 1.0,
+        "f1": 0.21238938053097342,
+        "tp": 12,
+        "fp": 89,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS19.csv",
+        "precision": 0.21782178217821782,
+        "recall": 0.3333333333333333,
+        "f1": 0.26347305389221554,
+        "tp": 22,
+        "fp": 79,
+        "fn": 44
+    },
+    {
+        "file": "A4Benchmark-TS50.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 55
+    },
+    {
+        "file": "synthetic_58.csv",
+        "precision": 0.1188118811881188,
+        "recall": 1.0,
+        "f1": 0.21238938053097342,
+        "tp": 12,
+        "fp": 89,
+        "fn": 0
+    },
+    {
+        "file": "real_62.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 20
+    },
+    {
+        "file": "real_48.csv",
+        "precision": 0.0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 0
+    },
+    {
+        "file": "synthetic_100.csv",
+        "precision": 0.1188118811881188,
+        "recall": 1.0,
+        "f1": 0.21238938053097342,
+        "tp": 12,
+        "fp": 89,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS10.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.3333333333333333,
+        "f1": 0.16417910447761194,
+        "tp": 11,
+        "fp": 90,
+        "fn": 22
+    },
+    {
+        "file": "A4Benchmark-TS53.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 11
+    },
+    {
+        "file": "A4Benchmark-TS68.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 11
+    },
+    {
+        "file": "synthetic_55.csv",
+        "precision": 0.1188118811881188,
+        "recall": 1.0,
+        "f1": 0.21238938053097342,
+        "tp": 12,
+        "fp": 89,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS67.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.16176470588235295,
+        "f1": 0.1301775147928994,
+        "tp": 11,
+        "fp": 90,
+        "fn": 57
+    },
+    {
+        "file": "A3Benchmark-TS62.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 77
+    },
+    {
+        "file": "real_27.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 22
+    },
+    {
+        "file": "A4Benchmark-TS94.csv",
+        "precision": 0.21153846153846154,
+        "recall": 0.3333333333333333,
+        "f1": 0.25882352941176473,
+        "tp": 22,
+        "fp": 82,
+        "fn": 44
+    },
+    {
+        "file": "real_22.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 68
+    },
+    {
+        "file": "A3Benchmark-TS83.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.1864406779661017,
+        "f1": 0.1375,
+        "tp": 11,
+        "fp": 90,
+        "fn": 48
+    },
+    {
+        "file": "A3Benchmark-TS59.csv",
+        "precision": 0.10185185185185185,
+        "recall": 0.25,
+        "f1": 0.14473684210526314,
+        "tp": 11,
+        "fp": 97,
+        "fn": 33
+    },
+    {
+        "file": "real_14.csv",
+        "precision": 0.0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 0
+    },
+    {
+        "file": "A3Benchmark-TS69.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 22
+    },
+    {
+        "file": "real_2.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 31
+    },
+    {
+        "file": "A3Benchmark-TS100.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 44
+    },
+    {
+        "file": "A3Benchmark-TS74.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 11
+    },
+    {
+        "file": "A4Benchmark-TS23.csv",
+        "precision": 0.21359223300970873,
+        "recall": 1.0,
+        "f1": 0.35200000000000004,
+        "tp": 22,
+        "fp": 81,
+        "fn": 0
+    },
+    {
+        "file": "synthetic_12.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "A3Benchmark-TS12.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.125,
+        "f1": 0.11640211640211641,
+        "tp": 11,
+        "fp": 90,
+        "fn": 77
+    },
+    {
+        "file": "A4Benchmark-TS27.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.15714285714285714,
+        "f1": 0.1286549707602339,
+        "tp": 11,
+        "fp": 90,
+        "fn": 59
+    },
+    {
+        "file": "A4Benchmark-TS58.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.3333333333333333,
+        "f1": 0.16417910447761194,
+        "tp": 11,
+        "fp": 90,
+        "fn": 22
+    },
+    {
+        "file": "synthetic_57.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "real_40.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 100
+    },
+    {
+        "file": "A4Benchmark-TS91.csv",
+        "precision": 0.20952380952380953,
+        "recall": 0.4,
+        "f1": 0.275,
+        "tp": 22,
+        "fp": 83,
+        "fn": 33
+    },
+    {
+        "file": "real_3.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 19
+    },
+    {
+        "file": "real_57.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.3333333333333333,
+        "f1": 0.16417910447761194,
+        "tp": 11,
+        "fp": 90,
+        "fn": 22
+    },
+    {
+        "file": "A3Benchmark-TS45.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.2,
+        "f1": 0.14102564102564105,
+        "tp": 11,
+        "fp": 90,
+        "fn": 44
+    },
+    {
+        "file": "A3Benchmark-TS68.csv",
+        "precision": 0.1782178217821782,
+        "recall": 0.21428571428571427,
+        "f1": 0.19459459459459458,
+        "tp": 18,
+        "fp": 83,
+        "fn": 66
+    },
+    {
+        "file": "A4Benchmark-TS4.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 66
+    },
+    {
+        "file": "A3Benchmark-TS28.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 11
+    },
+    {
+        "file": "real_35.csv",
+        "precision": 0.0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 0
+    },
+    {
+        "file": "synthetic_1.csv",
+        "precision": 0.1188118811881188,
+        "recall": 1.0,
+        "f1": 0.21238938053097342,
+        "tp": 12,
+        "fp": 89,
+        "fn": 0
+    },
+    {
+        "file": "real_58.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 48
+    },
+    {
+        "file": "A3Benchmark-TS23.csv",
+        "precision": 0.21782178217821782,
+        "recall": 0.2,
+        "f1": 0.20853080568720378,
+        "tp": 22,
+        "fp": 79,
+        "fn": 88
+    },
+    {
+        "file": "A4Benchmark-TS29.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.125,
+        "f1": 0.11640211640211641,
+        "tp": 11,
+        "fp": 90,
+        "fn": 77
+    },
+    {
+        "file": "A3Benchmark-TS14.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 97
+    },
+    {
+        "file": "A3Benchmark-TS55.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 55
+    },
+    {
+        "file": "synthetic_14.csv",
+        "precision": 0.12871287128712872,
+        "recall": 1.0,
+        "f1": 0.22807017543859648,
+        "tp": 13,
+        "fp": 88,
+        "fn": 0
+    },
+    {
+        "file": "A3Benchmark-TS92.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.3333333333333333,
+        "f1": 0.16417910447761194,
+        "tp": 11,
+        "fp": 90,
+        "fn": 22
+    },
+    {
+        "file": "A3Benchmark-TS17.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 11
+    },
+    {
+        "file": "A3Benchmark-TS75.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.14285714285714285,
+        "f1": 0.12359550561797754,
+        "tp": 11,
+        "fp": 90,
+        "fn": 66
+    },
+    {
+        "file": "A4Benchmark-TS18.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 11
+    },
+    {
+        "file": "real_33.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 11
+    },
+    {
+        "file": "synthetic_15.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS76.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 33
+    },
+    {
+        "file": "A3Benchmark-TS1.csv",
+        "precision": 0.21782178217821782,
+        "recall": 0.3333333333333333,
+        "f1": 0.26347305389221554,
+        "tp": 22,
+        "fp": 79,
+        "fn": 44
+    },
+    {
+        "file": "A3Benchmark-TS52.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 11
+    },
+    {
+        "file": "A3Benchmark-TS82.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.16923076923076924,
+        "f1": 0.13253012048192772,
+        "tp": 11,
+        "fp": 90,
+        "fn": 54
+    },
+    {
+        "file": "A4Benchmark-TS55.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 11
+    },
+    {
+        "file": "A3Benchmark-TS86.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.125,
+        "f1": 0.11640211640211641,
+        "tp": 11,
+        "fp": 90,
+        "fn": 77
+    },
+    {
+        "file": "real_59.csv",
+        "precision": 0.0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 0
+    },
+    {
+        "file": "synthetic_81.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "A3Benchmark-TS47.csv",
+        "precision": 0.10091743119266056,
+        "recall": 0.125,
+        "f1": 0.1116751269035533,
+        "tp": 11,
+        "fp": 98,
+        "fn": 77
+    },
+    {
+        "file": "A3Benchmark-TS56.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "synthetic_17.csv",
+        "precision": 0.12871287128712872,
+        "recall": 1.0,
+        "f1": 0.22807017543859648,
+        "tp": 13,
+        "fp": 88,
+        "fn": 0
+    },
+    {
+        "file": "real_20.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 29
+    },
+    {
+        "file": "synthetic_62.csv",
+        "precision": 0.12871287128712872,
+        "recall": 1.0,
+        "f1": 0.22807017543859648,
+        "tp": 13,
+        "fp": 88,
+        "fn": 0
+    },
+    {
+        "file": "A3Benchmark-TS36.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 22
+    },
+    {
+        "file": "synthetic_23.csv",
+        "precision": 0.12871287128712872,
+        "recall": 1.0,
+        "f1": 0.22807017543859648,
+        "tp": 13,
+        "fp": 88,
+        "fn": 0
+    },
+    {
+        "file": "A3Benchmark-TS99.csv",
+        "precision": 0.21782178217821782,
+        "recall": 0.25,
+        "f1": 0.23280423280423282,
+        "tp": 22,
+        "fp": 79,
+        "fn": 66
+    },
+    {
+        "file": "A4Benchmark-TS15.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 39
+    },
+    {
+        "file": "real_16.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 13
+    },
+    {
+        "file": "A3Benchmark-TS10.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 62
+    },
+    {
+        "file": "synthetic_11.csv",
+        "precision": 0.12871287128712872,
+        "recall": 1.0,
+        "f1": 0.22807017543859648,
+        "tp": 13,
+        "fp": 88,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS88.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.11702127659574468,
+        "f1": 0.11282051282051284,
+        "tp": 11,
+        "fp": 90,
+        "fn": 83
+    },
+    {
+        "file": "A4Benchmark-TS84.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 22
+    },
+    {
+        "file": "A3Benchmark-TS79.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.3333333333333333,
+        "f1": 0.16417910447761194,
+        "tp": 11,
+        "fp": 90,
+        "fn": 22
+    },
+    {
+        "file": "synthetic_2.csv",
+        "precision": 0.12871287128712872,
+        "recall": 1.0,
+        "f1": 0.22807017543859648,
+        "tp": 13,
+        "fp": 88,
+        "fn": 0
+    },
+    {
+        "file": "real_50.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 12
+    },
+    {
+        "file": "A4Benchmark-TS62.csv",
+        "precision": 0.21568627450980393,
+        "recall": 0.36666666666666664,
+        "f1": 0.271604938271605,
+        "tp": 22,
+        "fp": 80,
+        "fn": 38
+    },
+    {
+        "file": "A3Benchmark-TS66.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 11
+    },
+    {
+        "file": "A3Benchmark-TS4.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 66
+    },
+    {
+        "file": "A4Benchmark-TS90.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 66
+    },
+    {
+        "file": "A3Benchmark-TS61.csv",
+        "precision": 0.20754716981132076,
+        "recall": 0.2857142857142857,
+        "f1": 0.24043715846994534,
+        "tp": 22,
+        "fp": 84,
+        "fn": 55
+    },
+    {
+        "file": "real_9.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.3235294117647059,
+        "f1": 0.16296296296296298,
+        "tp": 11,
+        "fp": 90,
+        "fn": 23
+    },
+    {
+        "file": "synthetic_19.csv",
+        "precision": 0.1188118811881188,
+        "recall": 1.0,
+        "f1": 0.21238938053097342,
+        "tp": 12,
+        "fp": 89,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS43.csv",
+        "precision": 0.21782178217821782,
+        "recall": 0.4,
+        "f1": 0.2820512820512821,
+        "tp": 22,
+        "fp": 79,
+        "fn": 33
+    },
+    {
+        "file": "synthetic_29.csv",
+        "precision": 0.12871287128712872,
+        "recall": 1.0,
+        "f1": 0.22807017543859648,
+        "tp": 13,
+        "fp": 88,
+        "fn": 0
+    },
+    {
+        "file": "synthetic_80.csv",
+        "precision": 0.12871287128712872,
+        "recall": 1.0,
+        "f1": 0.22807017543859648,
+        "tp": 13,
+        "fp": 88,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS36.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 84
+    },
+    {
+        "file": "A4Benchmark-TS61.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 11
+    },
+    {
+        "file": "A3Benchmark-TS93.csv",
+        "precision": 0.21782178217821782,
+        "recall": 0.27848101265822783,
+        "f1": 0.24444444444444444,
+        "tp": 22,
+        "fp": 79,
+        "fn": 57
+    },
+    {
+        "file": "synthetic_77.csv",
+        "precision": 0.12871287128712872,
+        "recall": 1.0,
+        "f1": 0.22807017543859648,
+        "tp": 13,
+        "fp": 88,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS49.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 60
+    },
+    {
+        "file": "A4Benchmark-TS80.csv",
+        "precision": 0.21568627450980393,
+        "recall": 0.4,
+        "f1": 0.28025477707006374,
+        "tp": 22,
+        "fp": 80,
+        "fn": 33
+    },
+    {
+        "file": "synthetic_90.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "A3Benchmark-TS31.csv",
+        "precision": 0.21782178217821782,
+        "recall": 0.6666666666666666,
+        "f1": 0.3283582089552239,
+        "tp": 22,
+        "fp": 79,
+        "fn": 11
+    },
+    {
+        "file": "synthetic_72.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "A3Benchmark-TS42.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.2,
+        "f1": 0.14102564102564105,
+        "tp": 11,
+        "fp": 90,
+        "fn": 44
+    },
+    {
+        "file": "A4Benchmark-TS51.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 11
+    },
+    {
+        "file": "A4Benchmark-TS9.csv",
+        "precision": 0.1,
+        "recall": 1.0,
+        "f1": 0.18181818181818182,
+        "tp": 11,
+        "fp": 99,
+        "fn": 0
+    },
+    {
+        "file": "A3Benchmark-TS88.csv",
+        "precision": 0.12871287128712872,
+        "recall": 0.19117647058823528,
+        "f1": 0.15384615384615383,
+        "tp": 13,
+        "fp": 88,
+        "fn": 55
+    },
+    {
+        "file": "A3Benchmark-TS39.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 77
+    },
+    {
+        "file": "synthetic_31.csv",
+        "precision": 0.1188118811881188,
+        "recall": 1.0,
+        "f1": 0.21238938053097342,
+        "tp": 12,
+        "fp": 89,
+        "fn": 0
+    },
+    {
+        "file": "A3Benchmark-TS97.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 22
+    },
+    {
+        "file": "A4Benchmark-TS39.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.11224489795918367,
+        "f1": 0.11055276381909547,
+        "tp": 11,
+        "fp": 90,
+        "fn": 87
+    },
+    {
+        "file": "A3Benchmark-TS32.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 66
+    },
+    {
+        "file": "synthetic_75.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS37.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.3333333333333333,
+        "f1": 0.16417910447761194,
+        "tp": 11,
+        "fp": 90,
+        "fn": 22
+    },
+    {
+        "file": "A3Benchmark-TS22.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 33
+    },
+    {
+        "file": "A4Benchmark-TS59.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS93.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 22
+    },
+    {
+        "file": "real_66.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 63
+    },
+    {
+        "file": "synthetic_73.csv",
+        "precision": 0.1188118811881188,
+        "recall": 1.0,
+        "f1": 0.21238938053097342,
+        "tp": 12,
+        "fp": 89,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS92.csv",
+        "precision": 0.21782178217821782,
+        "recall": 0.27848101265822783,
+        "f1": 0.24444444444444444,
+        "tp": 22,
+        "fp": 79,
+        "fn": 57
+    },
+    {
+        "file": "A4Benchmark-TS32.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.16666666666666666,
+        "f1": 0.13173652694610777,
+        "tp": 11,
+        "fp": 90,
+        "fn": 55
+    },
+    {
+        "file": "synthetic_25.csv",
+        "precision": 0.1188118811881188,
+        "recall": 1.0,
+        "f1": 0.21238938053097342,
+        "tp": 12,
+        "fp": 89,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS66.csv",
+        "precision": 0.0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 0
+    },
+    {
+        "file": "synthetic_88.csv",
+        "precision": 0.1188118811881188,
+        "recall": 1.0,
+        "f1": 0.21238938053097342,
+        "tp": 12,
+        "fp": 89,
+        "fn": 0
+    },
+    {
+        "file": "A3Benchmark-TS44.csv",
+        "precision": 0.3898305084745763,
+        "recall": 0.5476190476190477,
+        "f1": 0.45544554455445546,
+        "tp": 46,
+        "fp": 72,
+        "fn": 38
+    },
+    {
+        "file": "synthetic_6.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "synthetic_53.csv",
+        "precision": 0.12871287128712872,
+        "recall": 1.0,
+        "f1": 0.22807017543859648,
+        "tp": 13,
+        "fp": 88,
+        "fn": 0
+    },
+    {
+        "file": "A3Benchmark-TS7.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 33
+    },
+    {
+        "file": "synthetic_92.csv",
+        "precision": 0.12871287128712872,
+        "recall": 1.0,
+        "f1": 0.22807017543859648,
+        "tp": 13,
+        "fp": 88,
+        "fn": 0
+    },
+    {
+        "file": "real_41.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 22
+    },
+    {
+        "file": "synthetic_82.csv",
+        "precision": 0.1188118811881188,
+        "recall": 1.0,
+        "f1": 0.21238938053097342,
+        "tp": 12,
+        "fp": 89,
+        "fn": 0
+    },
+    {
+        "file": "synthetic_86.csv",
+        "precision": 0.12871287128712872,
+        "recall": 1.0,
+        "f1": 0.22807017543859648,
+        "tp": 13,
+        "fp": 88,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS87.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 11
+    },
+    {
+        "file": "real_23.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 29
+    },
+    {
+        "file": "A3Benchmark-TS15.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 44
+    },
+    {
+        "file": "synthetic_52.csv",
+        "precision": 0.1188118811881188,
+        "recall": 1.0,
+        "f1": 0.21238938053097342,
+        "tp": 12,
+        "fp": 89,
+        "fn": 0
+    },
+    {
+        "file": "synthetic_34.csv",
+        "precision": 0.1188118811881188,
+        "recall": 1.0,
+        "f1": 0.21238938053097342,
+        "tp": 12,
+        "fp": 89,
+        "fn": 0
+    },
+    {
+        "file": "synthetic_13.csv",
+        "precision": 0.1188118811881188,
+        "recall": 1.0,
+        "f1": 0.21238938053097342,
+        "tp": 12,
+        "fp": 89,
+        "fn": 0
+    },
+    {
+        "file": "synthetic_93.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "real_6.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 13
+    },
+    {
+        "file": "synthetic_76.csv",
+        "precision": 0.1188118811881188,
+        "recall": 1.0,
+        "f1": 0.21238938053097342,
+        "tp": 12,
+        "fp": 89,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS22.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 22
+    },
+    {
+        "file": "A4Benchmark-TS70.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 22
+    },
+    {
+        "file": "synthetic_91.csv",
+        "precision": 0.1188118811881188,
+        "recall": 1.0,
+        "f1": 0.21238938053097342,
+        "tp": 12,
+        "fp": 89,
+        "fn": 0
+    },
+    {
+        "file": "A3Benchmark-TS60.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.25,
+        "f1": 0.15172413793103448,
+        "tp": 11,
+        "fp": 90,
+        "fn": 33
+    },
+    {
+        "file": "A4Benchmark-TS41.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.16666666666666666,
+        "f1": 0.13173652694610777,
+        "tp": 11,
+        "fp": 90,
+        "fn": 55
+    },
+    {
+        "file": "real_56.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 34
+    },
+    {
+        "file": "A4Benchmark-TS86.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 66
+    },
+    {
+        "file": "synthetic_42.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "A3Benchmark-TS78.csv",
+        "precision": 0.21359223300970873,
+        "recall": 0.24175824175824176,
+        "f1": 0.2268041237113402,
+        "tp": 22,
+        "fp": 81,
+        "fn": 69
+    },
+    {
+        "file": "A3Benchmark-TS21.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.125,
+        "f1": 0.11640211640211641,
+        "tp": 11,
+        "fp": 90,
+        "fn": 77
+    },
+    {
+        "file": "synthetic_61.csv",
+        "precision": 0.1188118811881188,
+        "recall": 1.0,
+        "f1": 0.21238938053097342,
+        "tp": 12,
+        "fp": 89,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS47.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "real_12.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 11
+    },
+    {
+        "file": "A3Benchmark-TS11.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.3333333333333333,
+        "f1": 0.16417910447761194,
+        "tp": 11,
+        "fp": 90,
+        "fn": 22
+    },
+    {
+        "file": "synthetic_5.csv",
+        "precision": 0.12871287128712872,
+        "recall": 1.0,
+        "f1": 0.22807017543859648,
+        "tp": 13,
+        "fp": 88,
+        "fn": 0
+    },
+    {
+        "file": "synthetic_28.csv",
+        "precision": 0.1188118811881188,
+        "recall": 1.0,
+        "f1": 0.21238938053097342,
+        "tp": 12,
+        "fp": 89,
+        "fn": 0
+    },
+    {
+        "file": "synthetic_40.csv",
+        "precision": 0.1188118811881188,
+        "recall": 1.0,
+        "f1": 0.21238938053097342,
+        "tp": 12,
+        "fp": 89,
+        "fn": 0
+    },
+    {
+        "file": "synthetic_24.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "A3Benchmark-TS58.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 21
+    },
+    {
+        "file": "real_51.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 23
+    },
+    {
+        "file": "real_67.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 44
+    },
+    {
+        "file": "A4Benchmark-TS25.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 33
+    },
+    {
+        "file": "A4Benchmark-TS46.csv",
+        "precision": 0.205607476635514,
+        "recall": 0.2857142857142857,
+        "f1": 0.23913043478260868,
+        "tp": 22,
+        "fp": 85,
+        "fn": 55
+    },
+    {
+        "file": "A3Benchmark-TS46.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 22
+    },
+    {
+        "file": "synthetic_78.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "synthetic_79.csv",
+        "precision": 0.1188118811881188,
+        "recall": 1.0,
+        "f1": 0.21238938053097342,
+        "tp": 12,
+        "fp": 89,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS97.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 55
+    },
+    {
+        "file": "real_45.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 11
+    },
+    {
+        "file": "real_15.csv",
+        "precision": 0.12871287128712872,
+        "recall": 0.5,
+        "f1": 0.2047244094488189,
+        "tp": 13,
+        "fp": 88,
+        "fn": 13
+    },
+    {
+        "file": "A3Benchmark-TS48.csv",
+        "precision": 0.20754716981132076,
+        "recall": 0.5,
+        "f1": 0.2933333333333334,
+        "tp": 22,
+        "fp": 84,
+        "fn": 22
+    },
+    {
+        "file": "A4Benchmark-TS24.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 44
+    },
+    {
+        "file": "A3Benchmark-TS41.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.15714285714285714,
+        "f1": 0.1286549707602339,
+        "tp": 11,
+        "fp": 90,
+        "fn": 59
+    },
+    {
+        "file": "A3Benchmark-TS50.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 36
+    },
+    {
+        "file": "A4Benchmark-TS78.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 77
+    },
+    {
+        "file": "synthetic_39.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS56.csv",
+        "precision": 0.13861386138613863,
+        "recall": 0.16470588235294117,
+        "f1": 0.15053763440860216,
+        "tp": 14,
+        "fp": 87,
+        "fn": 71
+    },
+    {
+        "file": "real_65.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 47
+    },
+    {
+        "file": "synthetic_99.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "real_31.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 44
+    },
+    {
+        "file": "synthetic_45.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS77.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.16666666666666666,
+        "f1": 0.13173652694610777,
+        "tp": 11,
+        "fp": 90,
+        "fn": 55
+    },
+    {
+        "file": "synthetic_20.csv",
+        "precision": 0.12871287128712872,
+        "recall": 1.0,
+        "f1": 0.22807017543859648,
+        "tp": 13,
+        "fp": 88,
+        "fn": 0
+    },
+    {
+        "file": "synthetic_67.csv",
+        "precision": 0.1188118811881188,
+        "recall": 1.0,
+        "f1": 0.21238938053097342,
+        "tp": 12,
+        "fp": 89,
+        "fn": 0
+    },
+    {
+        "file": "A3Benchmark-TS8.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.3333333333333333,
+        "f1": 0.16417910447761194,
+        "tp": 11,
+        "fp": 90,
+        "fn": 22
+    },
+    {
+        "file": "synthetic_43.csv",
+        "precision": 0.1188118811881188,
+        "recall": 1.0,
+        "f1": 0.21238938053097342,
+        "tp": 12,
+        "fp": 89,
+        "fn": 0
+    },
+    {
+        "file": "synthetic_56.csv",
+        "precision": 0.12871287128712872,
+        "recall": 1.0,
+        "f1": 0.22807017543859648,
+        "tp": 13,
+        "fp": 88,
+        "fn": 0
+    },
+    {
+        "file": "A3Benchmark-TS25.csv",
+        "precision": 0.0990990990990991,
+        "recall": 0.5,
+        "f1": 0.16541353383458648,
+        "tp": 11,
+        "fp": 100,
+        "fn": 11
+    },
+    {
+        "file": "A4Benchmark-TS98.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 86
+    },
+    {
+        "file": "A3Benchmark-TS65.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 44
+    },
+    {
+        "file": "synthetic_89.csv",
+        "precision": 0.12871287128712872,
+        "recall": 1.0,
+        "f1": 0.22807017543859648,
+        "tp": 13,
+        "fp": 88,
+        "fn": 0
+    },
+    {
+        "file": "A3Benchmark-TS64.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 55
+    },
+    {
+        "file": "A3Benchmark-TS84.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 11
+    },
+    {
+        "file": "A3Benchmark-TS67.csv",
+        "precision": 0.1,
+        "recall": 0.14285714285714285,
+        "f1": 0.11764705882352941,
+        "tp": 11,
+        "fp": 99,
+        "fn": 66
+    },
+    {
+        "file": "synthetic_36.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS48.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.2,
+        "f1": 0.14102564102564105,
+        "tp": 11,
+        "fp": 90,
+        "fn": 44
+    },
+    {
+        "file": "A4Benchmark-TS21.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.2,
+        "f1": 0.14102564102564105,
+        "tp": 11,
+        "fp": 90,
+        "fn": 44
+    },
+    {
+        "file": "synthetic_65.csv",
+        "precision": 0.12871287128712872,
+        "recall": 1.0,
+        "f1": 0.22807017543859648,
+        "tp": 13,
+        "fp": 88,
+        "fn": 0
+    },
+    {
+        "file": "real_54.csv",
+        "precision": 0.0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 0
+    },
+    {
+        "file": "A3Benchmark-TS63.csv",
+        "precision": 0.21782178217821782,
+        "recall": 0.3333333333333333,
+        "f1": 0.26347305389221554,
+        "tp": 22,
+        "fp": 79,
+        "fn": 44
+    },
+    {
+        "file": "A4Benchmark-TS99.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.2391304347826087,
+        "f1": 0.14965986394557823,
+        "tp": 11,
+        "fp": 90,
+        "fn": 35
+    },
+    {
+        "file": "real_30.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 15
+    },
+    {
+        "file": "A4Benchmark-TS96.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 11
+    },
+    {
+        "file": "real_13.csv",
+        "precision": 0.12871287128712872,
+        "recall": 0.5,
+        "f1": 0.2047244094488189,
+        "tp": 13,
+        "fp": 88,
+        "fn": 13
+    },
+    {
+        "file": "A4Benchmark-TS2.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 22
+    },
+    {
+        "file": "A4Benchmark-TS35.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.25,
+        "f1": 0.15172413793103448,
+        "tp": 11,
+        "fp": 90,
+        "fn": 33
+    },
+    {
+        "file": "A3Benchmark-TS49.csv",
+        "precision": 0.10891089108910891,
+        "recall": 0.14285714285714285,
+        "f1": 0.12359550561797754,
+        "tp": 11,
+        "fp": 90,
+        "fn": 66
+    },
+    {
+        "file": "A4Benchmark-TS30.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 22
+    },
+    {
+        "file": "A4Benchmark-TS6.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 17
+    },
+    {
+        "file": "real_49.csv",
+        "precision": 0.0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 0
+    },
+    {
+        "file": "synthetic_71.csv",
+        "precision": 0.12871287128712872,
+        "recall": 1.0,
+        "f1": 0.22807017543859648,
+        "tp": 13,
+        "fp": 88,
+        "fn": 0
+    },
+    {
+        "file": "A3Benchmark-TS80.csv",
+        "precision": 0.10091743119266056,
+        "recall": 0.22448979591836735,
+        "f1": 0.13924050632911394,
+        "tp": 11,
+        "fp": 98,
+        "fn": 38
+    },
+    {
+        "file": "real_29.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 38
+    },
+    {
+        "file": "synthetic_30.csv",
+        "precision": 0.10891089108910891,
+        "recall": 1.0,
+        "f1": 0.1964285714285714,
+        "tp": 11,
+        "fp": 90,
+        "fn": 0
+    },
+    {
+        "file": "A4Benchmark-TS1.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 74
+    },
+    {
+        "file": "real_53.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 30
+    },
+    {
+        "file": "A3Benchmark-TS2.csv",
+        "precision": 0.21782178217821782,
+        "recall": 0.2,
+        "f1": 0.20853080568720378,
+        "tp": 22,
+        "fp": 79,
+        "fn": 88
+    },
+    {
+        "file": "real_38.csv",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 101,
+        "fn": 28
+    },
+    {
+        "overall_precision": 0.0865335927297924,
+        "overall_recall": 0.24477949491142104,
+        "overall_f1": 0.12786484996455857,
+        "overall_tp": 3247,
+        "overall_fp": 34276,
+        "overall_fn": 10018
+    }
+]

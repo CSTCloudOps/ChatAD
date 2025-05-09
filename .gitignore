@@ -216,3 +216,6 @@ test.png
 test.json
 
 eval/anollm/*.json
+
+
+*.locks
