@@ -35,7 +35,7 @@
 #     --freeze_language_model True
 
 export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7
-CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 accelerate launch  src/train.py \
+CUDA_VISIBLE_DEVICES=0,1,2,3 accelerate launch  src/train.py \
     --deepspeed ds_config/ds_config.json \
     --stage sft \
     --do_train True \
@@ -71,73 +71,73 @@ CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 accelerate launch  src/train.py \
 
 
 
-CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 accelerate launch  src/train.py \
-    --deepspeed ds_config/ds_config.json \
-    --stage sft \
-    --do_train True \
-    --model_name_or_path /data/wangzexin/qwen2.5-vl-7b-instruct \
-    --trust_remote_code True \
-    --flash_attn fa2 \
-    --finetuning_type full \
-    --template qwen2_vl \
-    --dataset_dir data \
-    --dataset sft-vision-encoder-new \
-    --cutoff_len 10000 \
-    --learning_rate 1e-05 \
-    --num_train_epochs 5 \
-    --max_samples 100000 \
-    --overwrite_cache True \
-    --preprocessing_num_workers 2 \
-    --per_device_train_batch_size 1 \
-    --gradient_accumulation_steps 16 \
-    --lr_scheduler_type cosine \
-    --max_grad_norm 1.0 \
-    --logging_steps 10 \
-    --save_steps 1000 \
-    --warmup_ratio 0.1 \
-    --neftune_noise_alpha 0 \
-    --output_dir /data/wangzexin/saves/qwen_25_vl_sft_vision_tower_new \
-    --plot_loss True \
-    --overwrite_output_dir True \
-    --ddp_timeout 180000000 \
-    --bf16 True \
-    --freeze_vision_tower False \
-    --freeze_multi_modal_projector True \
-    --freeze_language_model True
+# CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 accelerate launch  src/train.py \
+#     --deepspeed ds_config/ds_config.json \
+#     --stage sft \
+#     --do_train True \
+#     --model_name_or_path /data/wangzexin/qwen2.5-vl-7b-instruct \
+#     --trust_remote_code True \
+#     --flash_attn fa2 \
+#     --finetuning_type full \
+#     --template qwen2_vl \
+#     --dataset_dir data \
+#     --dataset sft-vision-encoder-new \
+#     --cutoff_len 10000 \
+#     --learning_rate 1e-05 \
+#     --num_train_epochs 5 \
+#     --max_samples 100000 \
+#     --overwrite_cache True \
+#     --preprocessing_num_workers 2 \
+#     --per_device_train_batch_size 1 \
+#     --gradient_accumulation_steps 16 \
+#     --lr_scheduler_type cosine \
+#     --max_grad_norm 1.0 \
+#     --logging_steps 10 \
+#     --save_steps 1000 \
+#     --warmup_ratio 0.1 \
+#     --neftune_noise_alpha 0 \
+#     --output_dir /data/wangzexin/saves/qwen_25_vl_sft_vision_tower_new \
+#     --plot_loss True \
+#     --overwrite_output_dir True \
+#     --ddp_timeout 180000000 \
+#     --bf16 True \
+#     --freeze_vision_tower False \
+#     --freeze_multi_modal_projector True \
+#     --freeze_language_model True
 
 
 
-export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7
-CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 accelerate launch  src/train.py \
-    --deepspeed ds_config/ds_config.json \
-    --stage sft \
-    --do_train True \
-    --model_name_or_path /data/wangzexin/saves/qwen_25_vl_sft_vision_tower_new \
-    --trust_remote_code True \
-    --flash_attn fa2 \
-    --finetuning_type full \
-    --template qwen2_vl \
-    --dataset_dir data \
-    --dataset sft-image-plot1 \
-    --cutoff_len 10000 \
-    --learning_rate 1e-05 \
-    --num_train_epochs 5 \
-    --max_samples 100000 \
-    --overwrite_cache True \
-    --preprocessing_num_workers 2 \
-    --per_device_train_batch_size 1 \
-    --gradient_accumulation_steps 16 \
-    --lr_scheduler_type cosine \
-    --max_grad_norm 1.0 \
-    --logging_steps 10 \
-    --save_steps 1000 \
-    --warmup_ratio 0.1 \
-    --neftune_noise_alpha 0 \
-    --output_dir /data/wangzexin/saves/qwen_25_vl_sft_all_after_sft_vision_tower_new \
-    --plot_loss True \
-    --overwrite_output_dir True \
-    --ddp_timeout 180000000 \
-    --bf16 True \
-    --freeze_vision_tower False \
-    --freeze_multi_modal_projector False \
-    --freeze_language_model False
+# export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7
+# CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 accelerate launch  src/train.py \
+#     --deepspeed ds_config/ds_config.json \
+#     --stage sft \
+#     --do_train True \
+#     --model_name_or_path /data/wangzexin/saves/qwen_25_vl_sft_vision_tower_new \
+#     --trust_remote_code True \
+#     --flash_attn fa2 \
+#     --finetuning_type full \
+#     --template qwen2_vl \
+#     --dataset_dir data \
+#     --dataset sft-image-plot1 \
+#     --cutoff_len 10000 \
+#     --learning_rate 1e-05 \
+#     --num_train_epochs 5 \
+#     --max_samples 100000 \
+#     --overwrite_cache True \
+#     --preprocessing_num_workers 2 \
+#     --per_device_train_batch_size 1 \
+#     --gradient_accumulation_steps 16 \
+#     --lr_scheduler_type cosine \
+#     --max_grad_norm 1.0 \
+#     --logging_steps 10 \
+#     --save_steps 1000 \
+#     --warmup_ratio 0.1 \
+#     --neftune_noise_alpha 0 \
+#     --output_dir /data/wangzexin/saves/qwen_25_vl_sft_all_after_sft_vision_tower_new \
+#     --plot_loss True \
+#     --overwrite_output_dir True \
+#     --ddp_timeout 180000000 \
+#     --bf16 True \
+#     --freeze_vision_tower False \
+#     --freeze_multi_modal_projector False \
+#     --freeze_language_model False
