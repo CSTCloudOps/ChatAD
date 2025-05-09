@@ -52,7 +52,7 @@ def generate_eval_dataset(window, test_portion, dataset_dir, COT, moving_average
             labels_now = labels[i*window: (i+1)*window]
             
             # Min-max normalization for better visualization
-            values_now = (values_now - np.min(values_now)) / (np.max(values_now) - np.min(values_now))
+            values_now = (values_now - np.min(values_now)) / (np.max(values_now) - np.min(values_now)) if np.max(values_now) - np.min(values_now) != 0 else values_now
             values_now = [round(num, 3) for num in values_now]
             plt.figure(figsize=(12, 6))
             plt.plot(values_now, label='Time Series', color='blue')

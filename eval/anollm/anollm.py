@@ -10,7 +10,7 @@ import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
 
-FEW_SHOT_IMAGES = {'/home/wzx/ChatAD/eval/llm_baseline/ts_012995d7.png': "Final answer: \\boxed{[[130, 131]]}", '/home/wzx/ChatAD/eval/llm_baseline/ts_85bfe7a2.png': "Final answer: \\boxed{[[56, 62]]}", '/home/wzx/ChatAD/eval/llm_baseline/ts_9848a2c7.png':"Final answer: \\boxed{[[32, 38], [95, 100]]}"}
+FEW_SHOT_IMAGES = {'/home/wzx/ChatAD/eval/anollm/ts_012995d7.png': "Final answer: \\boxed{[[130, 131]]}", '/home/wzx/ChatAD/eval/anollm/ts_85bfe7a2.png': "Final answer: \\boxed{[[56, 62]]}", '/home/wzx/ChatAD/eval/anollm/ts_9848a2c7.png':"Final answer: \\boxed{[[32, 38], [95, 100]]}"}
 
 PROMPT = """Detect ranges of anomalies in this time series, in terms of the x-axis coordinate.
 List one by one, in python list format. 
@@ -183,7 +183,7 @@ def generate_eval_dataset(window, test_portion, dataset_dir, COT, moving_average
     # Save results
     data_name = dataset_dir.split("/")[-2]
     result_path = (
-        f"/home/wzx/ChatAD/eval/llm_baseline/anollm_{data_name}.json"
+        f"/home/wzx/ChatAD/eval/anollm/anollm_{data_name}.json"
     )
     json.dump(result, open(result_path, "wt"), ensure_ascii=False, indent=4)
     return result_path
