@@ -218,6 +218,24 @@ def process_input(
     """
     print(model_type)
     if model_type == "qwen2_5_vl" and image_path is not None:
+        # 创建输出目录
+        # os.makedirs("output_images", exist_ok=True)
+
+        # # 将图像字节数据转换为PIL Image并保存
+        # image = Image.open(io.BytesIO(image_bytes))
+
+        # # 获取当前时间戳作为文件名
+        # import time
+        # timestamp = int(time.time())
+        # image_path = f"output_images/image_{timestamp}.png"
+
+        # # 保存图像
+        # image.save(image_path)
+        # print(f"图像已保存至: {image_path}")
+
+        # 将图像转换为base64格式
+        # image_base64 = image_to_base64(image_bytes)
+
         # 构建消息格式
         messages = [
             {
@@ -316,11 +334,8 @@ def main(TYPE: str = "image"):
     total_fp = 0
     total_fn = 0
     results = []
-    try:
-        with open("./data/eval_label.json", "r") as f:
-            label = json.load(f)
-    except:
-        label = [{"type": ""} for i in range(len(df))]
+    with open("./data/eval_label.json", "r") as f:
+        label = json.load(f)
 
     for item, item_label in zip(df, label):
         try:
@@ -353,7 +368,7 @@ def main(TYPE: str = "image"):
             clean_up_tokenization_spaces=False,
         )
         print(response)
-        # print("Ground Truth:", item["messages"][1]["content"])
+        print("Ground Truth:", item["messages"][1]["content"])
         # 提取预测的异常区间
         pred_intervals = extract_anomaly_intervals(response[0])
         if pred_intervals is None:
@@ -368,7 +383,7 @@ def main(TYPE: str = "image"):
         f1, precision, recall, tp, fp, fn = point_adjust_f1(
             pred_intervals, gt_intervals, ts_length=1000  # 使用实际的时间序列长度
         )
-        print("pred_intervals, gt_intervals", pred_intervals, gt_intervals)
+
         # 累积统计量
         total_tp += tp
         total_fp += fp

@@ -37,9 +37,6 @@ def generate_eval_dataset(window, test_portion, dataset_dir, COT, moving_average
         labels = df['label'].to_numpy()[-int(len(df)*test_portion):]
         
         os.makedirs('/home/wzx/ChatAD/eval/public_ts_data/images', exist_ok=True)
-        # Skip if no anomalies in the sequence
-        if np.sum(labels) == 0:
-            continue
         
         question = f"<image>Given time series visualization, analyze the time series and detect anomalies.\n\n"
         background_info = (
@@ -103,7 +100,7 @@ def generate_eval_dataset(window, test_portion, dataset_dir, COT, moving_average
             if len(anomaly_segments) == 0:
                 answers = "Final Answer\\boxed{[]}"
             else:
-                answers = f"Final Answer\\boxed{str(anomaly_segments)}"
+                answers = f"Final Answer\\boxed{{{str(anomaly_segments)}}}"
 
             result.append({
                 "messages": [

@@ -39,7 +39,7 @@
     }
   },
   "sft-image-plot1": {
-    "file_name": "ts_train_image_mixed_PLOT1.json",
+    "file_name": "ts_train_image_mixed_plot1.json",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",

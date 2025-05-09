@@ -213,3 +213,6 @@ flash_attn*
 
 test.py
 test.png
+test.json
+
+eval/anollm/*.json
