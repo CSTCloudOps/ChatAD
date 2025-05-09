@@ -30,12 +30,12 @@ run_dataset_experiments() {
     echo "Completed all experiments for $dataset on GPU $gpu_id"
 }
 
-# 创建一个临时目录来存储锁文件
-mkdir -p /tmp/dataset_locks
+# 创建一个目录来存储锁文件
+mkdir -p ./.locks/anollm
 
 # 为每个数据集创建一个锁文件
 for dataset in "${datasets[@]}"; do
-    touch "/tmp/dataset_locks/${dataset}.lock"
+    touch "./.locks/anollm/${dataset}.lock"
 done
 
 # 启动不同的进程处理每个数据集
@@ -47,7 +47,7 @@ for i in "${!datasets[@]}"; do
     (
         flock -x 200
         run_dataset_experiments "$dataset" "$gpu_id"
-    ) 200>"/tmp/dataset_locks/${dataset}.lock" &
+    ) 200>"./.locks/anollm/${dataset}.lock" &
 done
 
 # 等待所有后台进程完成
@@ -55,7 +55,7 @@ wait
 echo "All experiments completed!"
 
 # 清理锁文件
-rm -rf /tmp/dataset_locks 
+rm -rf ./.locks/anollm
 
 
 
