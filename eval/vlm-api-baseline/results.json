@@ -1,0 +1,44 @@
+{
+  "overall": {
+    "f1": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "tp": 0,
+    "fp": 33,
+    "fn": 17
+  },
+  "samples": [
+    {
+      "prediction": [
+        [
+          0,
+          10
+        ],
+        [
+          50,
+          60
+        ],
+        [
+          100,
+          110
+        ]
+      ],
+      "ground_truth": [
+        [
+          87,
+          93
+        ]
+      ],
+      "f1": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0,
+      "fp": 33,
+      "fn": 17,
+      "anomaly_type": [
+        "level_shift"
+      ],
+      "image_path": "./SFT_IMAGE_PLOT1/ts_7239d2ff.png"
+    }
+  ]
+}
