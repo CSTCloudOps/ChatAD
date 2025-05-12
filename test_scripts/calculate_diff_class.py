@@ -24,5 +24,5 @@ def cal_diff_class(file = './eval/image_stft_sft.json'):
 
 
 
-cal_diff_class()
-cal_diff_class('./eval/image_stft.json')
+# cal_diff_class()
+cal_diff_class('./eval/image_stft_sft.json')

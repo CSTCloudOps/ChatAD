@@ -15,11 +15,11 @@ run_dataset_experiments() {
     # 运行不同长度的实验
     for length in "${lengths[@]}"; do
         echo "Running $dataset with length $length"
-        python eval_public_dataset.py $dataset $length m f
-        python eval_normal.py --model_path /data/wangzexin/qwen2.5_7b_vlm/ \
-            --data_path ./public_ts_data/qa_files/${dataset}.json \
-            --output_path ./public_ts_data/result/${dataset}_${length}_m_f_normal.json
-        python eval_normal.py --model_path /home/wzx/saves/qwen_25_vl_sft_image_plot1 \
+        python eval_public_dataset.py $dataset $length m t
+        # python eval_normal.py --model_path /data/wangzexin/qwen2.5_7b_vlm/ \
+        #     --data_path ./public_ts_data/qa_files/${dataset}.json \
+        #     --output_path ./public_ts_data/result/${dataset}_${length}_m_f_normal.json
+        python eval_normal.py --model_path /data/wangzexin/saves/qwen_25_vl_sft_all_after_sft_vision_tower \
             --data_path ./public_ts_data/qa_files/${dataset}.json \
             --output_path ./public_ts_data/result/${dataset}_${length}_m_f_normal.json
     done
