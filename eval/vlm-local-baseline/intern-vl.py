@@ -231,11 +231,11 @@ def point_adjust_f1(
 
     return f1_score, precision, recall, int(tp), int(fp), int(fn)
 
-def eval():
+def evaluation():
     path = sys.argv[1]
     output_path = sys.argv[2]
 
-    with open('/home/wzx/ChatAD/data/ts_eval_image_mixed_plot1.json', 'r') as f:
+    with open('/home/wzx/ChatAD/data/ts_eval_image_mixed_PLOT1.json', 'r') as f:
         data = json.load(f)
     with open('/home/wzx/ChatAD/data/eval_label.json', 'r') as f:
         label = json.load(f)
@@ -244,25 +244,27 @@ def eval():
     total_fp = 0
     total_fn = 0
     results = []
+    device_map = split_model(path)
+    model = AutoModel.from_pretrained(
+        path,
+        torch_dtype=torch.bfloat16,
+        load_in_8bit=False,
+        low_cpu_mem_usage=True,
+        use_flash_attn=True,
+        trust_remote_code=True,
+        device_map=device_map).eval()
+    tokenizer = AutoTokenizer.from_pretrained(path, trust_remote_code=True, use_fast=False)
 
     for item, item_label in zip(data,label):
         image_path = item['images'][0]
         question = item['messages'][0]['content']
         groundtruth = item['messages'][1]['content']
 
-        
-        # path = 'OpenGVLab/InternVL3-8B'
-        device_map = split_model(path)
-        model = AutoModel.from_pretrained(
-            path,
-            torch_dtype=torch.bfloat16,
-            load_in_8bit=False,
-            low_cpu_mem_usage=True,
-            use_flash_attn=True,
-            trust_remote_code=True,
-            device_map=device_map).eval()
-        tokenizer = AutoTokenizer.from_pretrained(path, trust_remote_code=True, use_fast=False)
-
+        if (
+            "Write anomalous intervals (final answer) using python list format"
+            not in question
+        ):
+            continue
         # set the max number of tiles in `max_num`
         pixel_values = load_image(image_path, max_num=12).to(torch.bfloat16).cuda()
         generation_config = dict(max_new_tokens=1024, do_sample=True)
@@ -304,7 +306,6 @@ def eval():
                 "image_path": image_path,
             }
         )
-
         print(f"F1: {f1:.4f}, Precision: {precision:.4f}, Recall: {recall:.4f}")
 
     total_precision = (
@@ -348,4 +349,4 @@ def eval():
     print(f"\nDetailed results saved to {output_path}")
 
 if __name__ == "__main__":
-    eval()
+    evaluation()
