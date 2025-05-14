@@ -1,16 +1,9 @@
-import math
 import numpy as np
-import torch
-import torchvision.transforms as T
-from decord import VideoReader, cpu
-from PIL import Image
-from torchvision.transforms.functional import InterpolationMode
-from transformers import AutoModel, AutoTokenizer, AutoConfig
 import json
 from typing import List, Dict, Any, Union, Tuple
 import sys
 import re
-from openai import OpenAI
+from openai import OpenAI, AzureOpenAI
 import base64
 import os
 
@@ -140,7 +133,7 @@ def encode_image(image_path):
         return base64.b64encode(image_file.read()).decode("utf-8")
 
 
-def evaluation(model_name: str = "gpt-4o-mini"):
+def evaluation(model_name: str = "gpt-4o-mini", output_path: str = "results.json"):
     output_path = sys.argv[1]
 
     with open("/home/wzx/ChatAD/data/ts_eval_image_mixed_plot1.json", "r") as f:
@@ -154,7 +147,8 @@ def evaluation(model_name: str = "gpt-4o-mini"):
     results = []
     api_key = os.getenv("OPENAI_API_KEY")
     base_url = os.getenv("OPENAI_BASE_URL")
-    client = OpenAI(api_key=api_key, base_url=base_url)
+    api_version = os.getenv("OPENAI_API_VERSION")
+    client = AzureOpenAI(api_key=api_key, azure_endpoint=base_url, api_version=api_version)
     for item, item_label in zip(data, label):
         image_path = item["images"][0]
         question = item["messages"][0]["content"]
@@ -271,7 +265,7 @@ def evaluation(model_name: str = "gpt-4o-mini"):
 
     # 保存详细结果
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    with open(model_name + "_" + output_path, "w") as f:
+    with open(output_path, "w") as f:
         json.dump(
             {
                 "overall": {
@@ -293,4 +287,4 @@ def evaluation(model_name: str = "gpt-4o-mini"):
 
 if __name__ == "__main__":
     # evaluation(model_name="gemini-2.0-flash-thinking-exp-01-21")
-    evaluation(model_name="gpt-4o-mini")
+    evaluation(model_name="gpt-4o-2024-11-20", output_path="./eval/vlm-api-baseline/results_gpt-4o-mini.json")
