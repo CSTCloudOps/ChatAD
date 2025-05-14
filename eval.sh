@@ -1,31 +1,14 @@
-export CUDA_VISIBLE_DEVICES=0
-
-
-# python eval/eval_normal.py --model_path=/data/wangzexin/qwen2.5_7b_vlm --data_path=./data/ts_eval_image_mixed_plot1.json --output_path=./eval/image_plot1.json
-
-
-
-# python eval/eval_normal.py --model_path=/data/wangzexin/qwen2.5_7b_vlm --data_path=./data/ts_eval_image_mixed_plot2.json --output_path=./eval/image_plot2.json
-
-
-# python eval/eval_normal.py --model_path=/data/wangzexin/qwen2.5_7b_vlm --data_path=./data/ts_eval_text_mixed.json --output_path=./eval/text.json
+export CUDA_VISIBLE_DEVICES=0,1,2,3
 
 
 
 
-# python eval/eval_normal.py --model_path=/home/wzx/saves/qwen_25_vl_sft_image_plot1 --data_path=./data/ts_eval_image_mixed_plot1.json --output_path=./eval/image_plot1.json
+python eval/eval_normal.py --model_path=/data/wangzexin/saves/qwenvl_7b_rl_vision_only_normal/global_step_710/actor/huggingface/ --data_path=./data/ts_eval_image_mixed_PLOT1.json --output_path=./eval/RL_normal.json
 
 
-
-# python eval/eval_normal.py --model_path=/home/wzx/saves/qwen_25_vl_sft_image_plot2 --data_path=./data/ts_eval_image_mixed_plot2.json --output_path=./eval/image_plot2.json
-
+python eval/eval_normal.py --model_path=/data/wangzexin/saves/rl_after_sft_vision_tower/global_step_65/actor/huggingface/ --data_path=./data/ts_eval_image_mixed_PLOT1.json --output_path=./eval/SFT_Vison_RL_TSAD.json
 
 
-# python eval/eval_normal.py --model_path=/home/wzx/saves/qwen_25_vl_sft_text --data_path=./data/ts_eval_text_mixed.json --output_path=./eval/text.json
+python eval/eval_normal.py --model_path=/data/wangzexin/saves/qwenvl_7b_rl_vision_normal_and_basic/global_step_3520/actor/huggingface/ --data_path=./data/ts_eval_image_mixed_PLOT1.json --output_path=./eval/RL_normal_and_basic.json
 
-
-# python eval/eval_normal.py --model_path=/data/wangzexin/qwen2.5_7b_vlm --data_path=./data/ts_eval_image_mixed_frequency.json --output_path=./eval/image_frequency.json
-
-python eval/eval_normal.py --model_path=/home/wzx/saves/qwen_25_vl_sft_image_stft --data_path=./data/ts_eval_image_mixed_stft.json --output_path=./eval/image_stft_sft.json
-
-python eval/eval_normal.py --model_path=/data/wangzexin/qwen2.5_7b_vlm --data_path=./data/ts_eval_image_mixed_stft.json --output_path=./eval/image_stft.json
+python eval/eval_normal.py --model_path=/data/wangzexin/saves/qwenvl_7b_rl_vision_normal_and_shaplet/global_step_880/actor/huggingface/ --data_path=./data/ts_eval_image_mixed_PLOT1.json --output_path=./eval/RL_normal_and_shaplet.json
